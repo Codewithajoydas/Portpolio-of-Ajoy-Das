@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>05 Form Validation</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Form Validation</h1>
+    <form
+    id="form"
+    action="#"
+      style="display: flex; flex-direction: column; gap: 10px; width: 500px"
+    >
+      <input type="text" id="name" placeholder="Name"  />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+      />
+      <input
+        type="password"
+        name="confirm-password"
+        id="confirm-password"
+        autocomplete="on"
+        placeholder="Confirm Password"
+      />
+      <input
+        type="text"
+        name="phone"
+        id="phone"
+        placeholder="Phone Number"
+      />
+      <input
+        type="text"
+        name="address"
+        id="address"
+        placeholder="Address"
+        required
+      />
+      <input type="text" name="city" id="city" placeholder="City" required />
+      <input type="text" name="state" id="state" placeholder="State" required  />
+      <input type="text" name="zip" id="zip" placeholder="Zip Code" required />
+      <input
+        type="text"
+        name="country"
+        id="country"
+        placeholder="Country"
+        required
+      />
+      <input
+        type="date"
+        name="dob"
+        id="dob"
+        placeholder="Date of Birth"
+        required
+      />
+      <div style="display: flex; justify-content: space-around; gap: 10px">
+        <button type="submit" style="width: 300px;">Submit Form</button>
+        <button type="reset" style="color: red">Reset Form</button>
+      </div>
+    </form>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

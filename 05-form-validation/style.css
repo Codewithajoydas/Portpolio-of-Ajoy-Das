@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 100px;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #f0f0f0;
+    color: #000;
+    flex-direction: column;
+    row-gap: 10px;
+}
+input{
+    outline: none;
+    padding: 10px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 5px #f7f6f6;
+}
+button{
+    outline: none;
+    padding: 10px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 5px #f7f6f6;
+    cursor: pointer;
+}
