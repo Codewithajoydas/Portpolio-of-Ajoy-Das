@@ -12,6 +12,9 @@
 
 4. ✅ **[Todo List App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/04-todo-list-app/index.html)**  
    → Add, remove, and track your daily tasks easily.
+5. 📝 **[Form Validation](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/05-form-validation/index.html)**
+   → Validates user input for name, email, and password fields using JavaScript and regular expressions.
+
 
 ---
 
