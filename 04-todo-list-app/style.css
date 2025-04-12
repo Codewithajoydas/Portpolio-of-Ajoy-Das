@@ -46,6 +46,6 @@ ul {
   height: 50vh;
   overflow-y: auto;
   border-radius: 5px;
-  border-bottom: 1px solid  gray;
+  /* border-bottom: 1px solid  gray; */
   padding-top: 10px;
 }
