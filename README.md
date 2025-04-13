@@ -39,7 +39,7 @@ Here's your updated project list including the **Weather App** and **Sticky Note
 11. ☀️ **[Weather App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/11-weather-app/index.html)**  
    → Detects your location and shows current weather info using Open-Meteo API.
 
-12. 📌 **[Sticky Notes App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/12-sticky-notes-app/index.html)**  
+12. 📌 **[Sticky Notes App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/12-sticky-notes/index.html)**  
    → Add, delete, and save sticky notes using `localStorage`.
 
 ---
