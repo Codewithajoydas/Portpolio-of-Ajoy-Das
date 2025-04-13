@@ -4,6 +4,10 @@ This repository contains various JavaScript projects that demonstrate different 
 
 ---
 
+## Open The Website ```https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/```
+
+---
+
 1. 🔁 **[Palindrome Checker](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/01-palindrome-checker/index.html)**  
    → Checks if a word or sentence is a palindrome in real-time.
 
