@@ -5,7 +5,7 @@ This repository contains various JavaScript projects that demonstrate different 
 ---
 
 ## Open The Website 
-**[](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/)**
+**[Click Here](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/)**
 
 ---
 
