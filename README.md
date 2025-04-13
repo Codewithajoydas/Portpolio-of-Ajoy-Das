@@ -4,7 +4,8 @@ This repository contains various JavaScript projects that demonstrate different 
 
 ---
 
-## Open The Website ```https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/```
+## Open The Website 
+**[](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/)**
 
 ---
 
