@@ -1,0 +1,17 @@
+button{
+padding: 10px 20px;
+}
+body{
+    font-family: sans-serif;
+    background: #f7f7f7;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+}
+input{
+    padding: 10px 20px;
+}

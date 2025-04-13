@@ -1,8 +1,6 @@
-Here's your updated project list including the **Weather App** and **Sticky Notes App**:
+# 🚀 JavaScript Beginner Projects by Ajoy
 
----
-
-## 🚀 JavaScript Beginner Projects by Ajoy
+This repository contains various JavaScript projects that demonstrate different functionality and provide hands-on learning experiences for developers. Below is the list of projects included:
 
 ---
 
@@ -42,13 +40,58 @@ Here's your updated project list including the **Weather App** and **Sticky Note
 12. 📌 **[Sticky Notes App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/12-sticky-notes/index.html)**  
    → Add, delete, and save sticky notes using `localStorage`.
 
+13. ⌨️ **[Keyboard Events Game](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/13-keyboard-events-game/index.html)**  
+   → A fun game that listens for keyboard events and interacts with them.
+
+14. 🔢 **[Character Counter](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/14-character-counter/index.html)**  
+   → Count the characters in a text input field as you type.
+
+15. 🔐 **[Password Generator](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/15-password-generator/index.html)**  
+   → Generate strong, random passwords of customizable length.
+
+16. 📱 **[QR Code Generator](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/16-qr-code-generator/index.html)**  
+   → Generate a QR code based on user input.
+
+17. ✏️ **[Drawing App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/17-drawing-app/index.html)**  
+   → A simple drawing app where users can draw using a mouse or touch.
+
+18. 😂 **[Meme Generator](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/18-meme-generator/index.html)**  
+   → Create memes by adding text to random images.
+
+19. 💵 **[Currency Converter](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/19-currency-converter/index.html)**  
+   → Convert currency values based on the latest exchange rates.
+
+20. 🖱️ **[Drag & Drop Upload](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/20-drag-drop-upload/index.html)**  
+   → Allow users to drag and drop files to upload them.
+
+21. 🎤 **[Speech to Text](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/21-speech-to-text/index.html)**  
+   → Convert speech to text using the Web Speech API.
+
+22. ⏲️ **[Pomodoro Timer](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/22-pomodoro-timer/index.html)**  
+   → A Pomodoro technique timer to help you focus and manage tasks.
+
 ---
 
-### 📌 More Projects Coming Soon!
+Each of these projects is designed to help beginners learn and practice JavaScript. Feel free to explore them and contribute improvements or new features!
 
-I’m constantly building and improving!  
-Stay tuned for more exciting JavaScript projects in the future.
+## How to Run
+
+1. Clone the repository:  
+   `git clone https://github.com/your-username/your-repository.git`
+
+2. Navigate to the project directory:  
+   `cd your-repository`
+
+3. Open the project files in your browser to view and interact with them.
 
 ---
 
-Let me know if you want a portfolio-ready version of this markdown for your website or GitHub README!
+### Contributing
+
+Feel free to fork this repository, create a branch, make changes, and submit a pull request. Contributions are always welcome!
+
+---
+
+### License
+
+This project is open-source and available under the MIT License.
