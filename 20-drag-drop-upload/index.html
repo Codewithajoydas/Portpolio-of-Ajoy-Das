@@ -6,7 +6,13 @@
     <title>20 Drag Drop Upload</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="drop-area">
+<!-- <div id="drop-area"> -->
+  <p>Drag & Drop files here or click to upload</p>
+  <input type="file" id="fileElem" multiple style="display:none" />
+  <button id="fileSelect">Select Files</button>
+<!-- </div> -->
+<div id="fileList"></div>
 
     <script src="script.js"></script>
 </body>
