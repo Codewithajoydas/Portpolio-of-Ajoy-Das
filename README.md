@@ -5,7 +5,10 @@ This repository contains various JavaScript projects that demonstrate different 
 ---
 
 ## Open The Website 
-**[Click Here](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/)**
+[![Start Course](https://img.icons8.com/bubbles/100/circled-play.png)](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/) 
+
+
+
 
 ---
 
