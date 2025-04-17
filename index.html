@@ -1,99 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects</title>
-  <style>
-    :root {
-      --primary-color: #6200ea;
-      --background-color: #f5f5f5;
-      --card-color: #ffffff;
-      --text-color: #212121;
-      --hover-color: #ede7f6;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A collection of JavaScript projects for learning and practice."
+    />
+    <meta
+      name="keywords"
+      content="JavaScript, projects, web development, coding, tutorials"
+    />
+    <meta name="author" content="Ajoy Das" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <meta name ="theme-color" content="#6200ea" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#6200ea" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#6200ea" />
+    <meta name="msapplication-TileImage" content="./favicon.ico" />
+    <meta name="msapplication-config" content="./favicon.ico" />
+    <meta name="theme-color" content="#6200ea" />
+    <meta name="apple-mobile-web-app-title" content="JavaScript Projects" />
+    <meta name="mobile-web-app-title" content="JavaScript Projects" />
+    <meta name="msapplication-tooltip" content="JavaScript Projects" />
+    <meta name="msapplication-starturl" content="./index.html" />
+    <meta name="msapplication-navbutton-color" content="#6200ea" />
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--background-color);
-      margin: 0;
-      padding: 20px;
-    }
+    
 
-    h1 {
-      color: var(--text-color);
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2.5rem;
-    }
+    <title>Projects</title>
+    <style>
+      :root {
+        --primary-color: #6200ea;
+        --background-color: #f5f5f5;
+        --card-color: #ffffff;
+        --text-color: #212121;
+        --hover-color: #ede7f6;
+      }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--background-color);
+        margin: 0;
+        padding: 20px;
+      }
 
-    li a {
-      display: block;
-      background-color: var(--card-color);
-      color: var(--text-color);
-      padding: 20px;
-      border-radius: 12px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      font-size: 1.25rem;
-      font-weight: 500;
-      border-left: 6px solid var(--primary-color);
-    }
-
-    li a:hover {
-      background-color: var(--hover-color);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 600px) {
       h1 {
-        font-size: 1.8rem;
+        color: var(--text-color);
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       li a {
-        font-size: 1rem;
-        padding: 15px;
+        display: block;
+        background-color: var(--card-color);
+        color: var(--text-color);
+        padding: 20px;
+        border-radius: 12px;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        font-size: 1.25rem;
+        font-weight: 500;
+        border-left: 6px solid var(--primary-color);
       }
-    }
-  </style>
-</head>
-<body>
-  <h1>Projects are listed below</h1>
-  <ul>
-    <li><a href="./01-palindrome-checker/index.html">Palindrome Checker</a></li>
-    <li><a href="./02-random-quote-generator/index.html">Random Quote Generator</a></li>
-    <li><a href="./03-digital-clock/index.html">Digital Clock</a></li>
-    <li><a href="./04-todo-list-app/index.html">Todo List</a></li>
-    <li><a href="./05-form-validation/index.html">Form Validation</a></li>
-    <li><a href="./06-typewriter-effect/index.html">Typewriter Effect</a></li>
-    <li><a href="./07-stopwatch-app/index.html">Stopwatch App</a></li>
-    <li><a href="./08-rock-paper-scissors/index.html">Rock Paper Scissors</a></li>
-    <li><a href="./09-image-slider/index.html">Image Slider</a></li>
-    <li><a href="./10-theme-toggle/index.html">Theme Toggle</a></li>
-    <li><a href="./11-weather-app/index.html">Weather App</a></li>
-    <li><a href="./12-sticky-notes/index.html">Sticky Notes</a></li>
-    <li><a href="./13-keyboard-events-game/index.html">Keyboard Events</a></li>
-    <li><a href="./14-character-counter/index.html">Character Counter</a></li>
-    <li><a href="./15-password-generator/index.html">Password Generator</a></li>
-    <li><a href="./16-qr-code-generator/index.html">QR Code Generator</a></li>
-    <li><a href="./17-drawing-app/index.html">Drawing App</a></li>
-    <li><a href="./18-meme-generator/index.html">Meme Generator</a></li>
-    <li><a href="./19-currency-converter/index.html">Currency Converter</a></li>
-    <li><a href="./20-drag-drop-upload/index.html">Drag & Drop Upload</a></li>
-    <li><a href="./21-speech-to-text/index.html">Speech to Text</a></li>
-    <li><a href="./22-pomodoro-timer/index.html">Pomodoro Timer</a></li>
-  </ul>
-</body>
+
+      li a:hover {
+        background-color: var(--hover-color);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        li a {
+          font-size: 1rem;
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Projects are listed below</h1>
+    <ul>
+      <li>
+        <a href="./01-palindrome-checker/index.html">Palindrome Checker</a>
+      </li>
+      <li>
+        <a href="./02-random-quote-generator/index.html"
+          >Random Quote Generator</a
+        >
+      </li>
+      <li><a href="./03-digital-clock/index.html">Digital Clock</a></li>
+      <li><a href="./04-todo-list-app/index.html">Todo List</a></li>
+      <li><a href="./05-form-validation/index.html">Form Validation</a></li>
+      <li><a href="./06-typewriter-effect/index.html">Typewriter Effect</a></li>
+      <li><a href="./07-stopwatch-app/index.html">Stopwatch App</a></li>
+      <li>
+        <a href="./08-rock-paper-scissors/index.html">Rock Paper Scissors</a>
+      </li>
+      <li><a href="./09-image-slider/index.html">Image Slider</a></li>
+      <li><a href="./10-theme-toggle/index.html">Theme Toggle</a></li>
+      <li><a href="./11-weather-app/index.html">Weather App</a></li>
+      <li><a href="./12-sticky-notes/index.html">Sticky Notes</a></li>
+      <li>
+        <a href="./13-keyboard-events-game/index.html">Keyboard Events</a>
+      </li>
+      <li><a href="./14-character-counter/index.html">Character Counter</a></li>
+      <li>
+        <a href="./15-password-generator/index.html">Password Generator</a>
+      </li>
+      <li><a href="./16-qr-code-generator/index.html">QR Code Generator</a></li>
+      <li><a href="./17-drawing-app/index.html">Drawing App</a></li>
+      <li><a href="./18-meme-generator/index.html">Meme Generator</a></li>
+      <li>
+        <a href="./19-currency-converter/index.html">Currency Converter</a>
+      </li>
+      <li><a href="./20-drag-drop-upload/index.html">Drag & Drop Upload</a></li>
+      <li><a href="./21-speech-to-text/index.html">Speech to Text</a></li>
+      <li><a href="./22-pomodoro-timer/index.html">Pomodoro Timer</a></li>
+    </ul>
+  </body>
 </html>
