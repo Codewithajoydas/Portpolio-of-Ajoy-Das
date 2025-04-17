@@ -84,11 +84,12 @@ Each of these projects is designed to help beginners learn and practice JavaScri
 
 ## How to Run
 
-1. Clone the repository:  
-   `git clone https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS`
+1. Clone the repository:
+   ```base
+   git clone https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS
+   ```
 
-
-2. Open the project files in your browser to view and interact with them.
+3. Open the project files in your browser to view and interact with them.
 
 ---
 
