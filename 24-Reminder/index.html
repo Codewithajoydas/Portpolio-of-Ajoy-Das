@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do Reminder</title>
+</head>
+<body>
+  <h1>To-Do List Reminder</h1>
+
+  <input type="text" id="taskInput" placeholder="Enter your task">
+  <input type="number" id="timeInput" placeholder="Time in seconds">
+  <button onclick="scheduleReminder()">Set Reminder</button>
+  <button onclick="notifyMe()">Test Notification</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    function notifyMe() {
+      if (!("Notification" in window)) {
+        alert("This browser does not support desktop notifications");
+      } else if (Notification.permission === "granted") {
+        new Notification("Hi there!");
+      } else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then((permission) => {
+          if (permission === "granted") {
+            new Notification("Hi there!");
+          }
+        });
+      }
+    }
+
+    // Function to schedule a reminder
+    function scheduleReminder() {
+      const task = document.getElementById("taskInput").value;
+      const timeInSeconds = parseInt(document.getElementById("timeInput").value);
+
+      if (!task || isNaN(timeInSeconds) || timeInSeconds <= 0) {
+        alert("Please enter a valid task and time.");
+        return;
+      }
+
+      // Add the task to the task list
+      const taskList = document.getElementById("taskList");
+      const taskItem = document.createElement("li");
+      taskItem.textContent = `${task} - Reminder set for ${timeInSeconds} seconds`;
+      taskList.appendChild(taskItem);
+
+      // Schedule the notification after the input time
+      setTimeout(() => {
+        new Notification(`Reminder: ${task}`);
+      }, timeInSeconds * 1000); // Convert to milliseconds
+    }
+
+  </script>
+</body>
+</html>
