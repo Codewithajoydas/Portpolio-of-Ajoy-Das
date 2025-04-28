@@ -76,7 +76,7 @@ This repository contains various JavaScript projects that demonstrate different 
    → Convert speech to text using the Web Speech API.
 
 22. ⏲️ **[Pomodoro Timer](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/22-pomodoro-timer/index.html)**  
-   → A Pomodoro technique timer to help you focus and manage tasks.
+   → A Pomodoro technique timer to help you focus and manage tasks. `#ffffff`
 
 ---
 
@@ -84,11 +84,12 @@ Each of these projects is designed to help beginners learn and practice JavaScri
 
 ## How to Run
 
-1. Clone the repository:  
-   `git clone https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS`
+1. Clone the repository:
+   ```base
+   git clone https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS
+   ```
 
-
-2. Open the project files in your browser to view and interact with them.
+3. Open the project files in your browser to view and interact with them.
 
 ---
 
