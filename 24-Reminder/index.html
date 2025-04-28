@@ -2,17 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do Reminder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .container {
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      width: 400px;
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #000000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #313131;
+    }
+
+    #taskList {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    #taskList li {
+      background-color: #f1f1f1;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      text-align: left;
+      font-size: 16px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #taskList li span {
+      font-weight: bold;
+      color: #4CAF50;
+    }
+  </style>
 </head>
 <body>
-  <h1>To-Do List Reminder</h1>
 
-  <input type="text" id="taskInput" placeholder="Enter your task">
-  <input type="number" id="timeInput" placeholder="Time in seconds">
-  <button onclick="scheduleReminder()">Set Reminder</button>
-  <button onclick="notifyMe()">Test Notification</button>
+  <div class="container">
+    <h1>To-Do List Reminder</h1>
 
-  <ul id="taskList"></ul>
+    <input type="text" id="taskInput" placeholder="Enter your task">
+    <input type="number" id="timeInput" placeholder="Time in seconds">
+    <button onclick="scheduleReminder()">Set Reminder</button>
+    <button onclick="notifyMe()">Test Notification</button>
+
+    <ul id="taskList"></ul>
+  </div>
 
   <script>
     function notifyMe() {
@@ -29,7 +106,6 @@
       }
     }
 
-    // Function to schedule a reminder
     function scheduleReminder() {
       const task = document.getElementById("taskInput").value;
       const timeInSeconds = parseInt(document.getElementById("timeInput").value);
@@ -42,7 +118,7 @@
       // Add the task to the task list
       const taskList = document.getElementById("taskList");
       const taskItem = document.createElement("li");
-      taskItem.textContent = `${task} - Reminder set for ${timeInSeconds} seconds`;
+      taskItem.innerHTML = `${task} <span>Reminder set for ${timeInSeconds} seconds</span>`;
       taskList.appendChild(taskItem);
 
       // Schedule the notification after the input time
@@ -52,5 +128,6 @@
     }
 
   </script>
+
 </body>
 </html>
