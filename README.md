@@ -1,4 +1,6 @@
 # 🚀 JavaScript Beginner Projects by Ajoy
+![GitHub Repo stars](https://img.shields.io/github/stars/Codewithajoydas/JAVASCRIPT-PROJECTS?style=flat-square)
+![License](https://img.shields.io/github/license/Codewithajoydas/JAVASCRIPT-PROJECTS)
 
 This repository contains various JavaScript projects that demonstrate different functionality and provide hands-on learning experiences for developers. Below is the list of projects included:
 
