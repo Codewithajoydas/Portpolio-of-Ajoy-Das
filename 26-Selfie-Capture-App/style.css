@@ -12,6 +12,7 @@ button {
 }
 video {
   width: 90%;
+  /* transform: ; */
   height: 70%;
   border-radius: 10px;
 }
