@@ -7,9 +7,9 @@ This repository contains various JavaScript projects that demonstrate different 
 ---
 
 ## Open The Website
-
-[![Start Course](https://img.icons8.com/bubbles/100/circled-play.png)](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/)
-
+```base
+https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/
+```
 ---
 
 1. 🔁 **[Palindrome Checker](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/01-palindrome-checker/index.html)**  
