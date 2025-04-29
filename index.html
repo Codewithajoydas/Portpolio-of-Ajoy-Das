@@ -1,163 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A collection of JavaScript projects for learning and practice."
-    />
-    <meta
-      name="keywords"
-      content="JavaScript, projects, web development, coding, tutorials"
-    />
-    <meta name="author" content="Ajoy Das" />
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-    />
-    <meta name="theme-color" content="#6200ea" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#6200ea" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="msapplication-TileColor" content="#6200ea" />
-    <meta name="msapplication-TileImage" content="./favicon.ico" />
-    <meta name="msapplication-config" content="./favicon.ico" />
-    <meta name="apple-mobile-web-app-title" content="JavaScript Projects" />
-    <meta name="mobile-web-app-title" content="JavaScript Projects" />
-    <meta name="msapplication-tooltip" content="JavaScript Projects" />
-    <meta name="msapplication-starturl" content="./index.html" />
-    <meta name="msapplication-navbutton-color" content="#6200ea" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A collection of JavaScript projects for learning and practice." />
+  <meta name="keywords" content="JavaScript, projects, web development, coding, tutorials" />
+  <meta name="author" content="Ajoy Das" />
+  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <meta name="theme-color" content="#6200ea" />
+  <title>JavaScript Projects</title>
 
-    <title>Projects</title>
-    <style>
-      :root {
-        --primary-color: #6200ea;
-        --background-color: #f5f5f5;
-        --card-color: #ffffff;
-        --text-color: #212121;
-        --hover-color: #ede7f6;
-      }
+  <style>
+    :root {
+      --primary-color: #6200ea;
+      --background-color: #f4f6f8;
+      --card-color: #ffffff;
+      --text-color: #212121;
+      --hover-color: #ede7f6;
+    }
 
-      body {
-        font-family: "Roboto", sans-serif;
-        margin: 0;
-        background-color: var(--background-color);
-        height: 100vh;
-        overflow: hidden;
-      }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      h1 {
-        color: var(--text-color);
-        text-align: center;
-        margin: 20px 0;
-        font-size: 2rem;
-      }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
 
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 280px;
+      background-color: var(--card-color);
+      padding: 20px;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+      overflow-y: auto;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 4px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #666;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li a {
+      display: block;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      text-decoration: none;
+      color: var(--text-color);
+      background: var(--background-color);
+      border-left: 5px solid transparent;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .sidebar li a:hover {
+      background-color: var(--hover-color);
+      border-left: 5px solid var(--primary-color);
+      transform: translateX(4px);
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      padding: 20px;
+      background: var(--background-color);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 768px) {
       .container {
-        display: flex;
-        height: calc(100vh - 80px);
+        flex-direction: column;
       }
 
       .sidebar {
-        width: 300px;
-        background: var(--card-color);
-        overflow-y: auto;
-        padding: 20px;
-        height: 100vh;
-        /* margin-top: 10px; */
-        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .sidebar ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .sidebar li a {
-        display: block;
-        padding: 12px 16px;
-        margin-bottom: 10px;
-        text-decoration: none;
-        color: var(--text-color);
-        background: var(--background-color);
-        border-radius: 8px;
-        border-left: 5px solid var(--primary-color);
-        font-weight: 500;
-        transition: background 0.3s, transform 0.3s;
-      }
-
-      .sidebar li a:hover {
-        background: var(--hover-color);
-        transform: translateX(5px);
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        border-bottom: 1px solid #ddd;
       }
 
       .main-content {
-        flex: 1;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        padding: 40px;
-        display: flex;
+        padding: 10px;
+        height: calc(100vh - 300px);
       }
 
       iframe {
-        width: 100%;
         height: 100%;
-        border: none;
       }
+    }
+  </style>
+</head>
 
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-        }
-        .sidebar {
-          width: 100%;
-          height: 100vh;
-          box-shadow: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- <h1>JavaScript Projects</h1> -->
-    <div class="container">
-      <div class="sidebar"><br>
-        <p style="font-size: small; color: gray;">Projects</p>
-        <ul>
-          <li><a href="./01-palindrome-checker/index.html" target="projectFrame">1. Palindrome Checker</a></li>
-          <li><a href="./02-random-quote-generator/index.html" target="projectFrame">2. Random Quote Generator</a></li>
-          <li><a href="./03-digital-clock/index.html" target="projectFrame">3. Digital Clock</a></li>
-          <li><a href="./04-todo-list-app/index.html" target="projectFrame">4. Todo List</a></li>
-          <li><a href="./05-form-validation/index.html" target="projectFrame">5. Form Validation</a></li>
-          <li><a href="./06-typewriter-effect/index.html" target="projectFrame">6. Typewriter Effect</a></li>
-          <li><a href="./07-stopwatch-app/index.html" target="projectFrame">7. Stopwatch App</a></li>
-          <li><a href="./08-rock-paper-scissors/index.html" target="projectFrame">8. Rock Paper Scissors</a></li>
-          <li><a href="./09-image-slider/index.html" target="projectFrame">9. Image Slider</a></li>
-          <li><a href="./10-theme-toggle/index.html" target="projectFrame">10. Theme Toggle</a></li>
-          <li><a href="./11-weather-app/index.html" target="projectFrame">11. Weather App</a></li>
-          <li><a href="./12-sticky-notes/index.html" target="projectFrame">12. Sticky Notes</a></li>
-          <li><a href="./13-keyboard-events-game/index.html" target="projectFrame">13. Keyboard Events</a></li>
-          <li><a href="./14-character-counter/index.html" target="projectFrame">14. Character Counter</a></li>
-          <li><a href="./15-password-generator/index.html" target="projectFrame">15. Password Generator</a></li>
-          <li><a href="./16-qr-code-generator/index.html" target="projectFrame">16. QR Code Generator</a></li>
-          <li><a href="./17-drawing-app/index.html" target="projectFrame">17. Drawing App</a></li>
-          <li><a href="./18-meme-generator/index.html" target="projectFrame">18. Meme Generator</a></li>
-          <li><a href="./19-currency-converter/index.html" target="projectFrame">19. Currency Converter</a></li>
-          <li><a href="./20-drag-drop-upload/index.html" target="projectFrame">20. Drag & Drop Upload</a></li>
-          <li><a href="./21-speech-to-text/index.html" target="projectFrame">21. Speech to Text</a></li>
-          <li><a href="./22-pomodoro-timer/index.html" target="projectFrame">22. Pomodoro Timer</a></li>
-          <li><a href="./23-Location-Finder/index.html" target="projectFrame">23. Location Finder</a></li>
-          <li><a href="./24-Reminder/index.html" target="projectFrame">24. Reminder </a></li>
-          <li><a href="./25-SPA/index.html" target="projectFrame">25. SPA(Single Page Application) </a></li>
-        </ul>
-      </div>
-
-      <div class="main-content">
-        <iframe src="./01-palindrome-checker/index.html" name="projectFrame"></iframe>
-      </div>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>📁 Projects</h2>
+      <ul>
+        <li><a href="./01-palindrome-checker/index.html" target="projectFrame">1. Palindrome Checker</a></li>
+        <li><a href="./02-random-quote-generator/index.html" target="projectFrame">2. Random Quote Generator</a></li>
+        <li><a href="./03-digital-clock/index.html" target="projectFrame">3. Digital Clock</a></li>
+        <li><a href="./04-todo-list-app/index.html" target="projectFrame">4. Todo List</a></li>
+        <li><a href="./05-form-validation/index.html" target="projectFrame">5. Form Validation</a></li>
+        <li><a href="./06-typewriter-effect/index.html" target="projectFrame">6. Typewriter Effect</a></li>
+        <li><a href="./07-stopwatch-app/index.html" target="projectFrame">7. Stopwatch App</a></li>
+        <li><a href="./08-rock-paper-scissors/index.html" target="projectFrame">8. Rock Paper Scissors</a></li>
+        <li><a href="./09-image-slider/index.html" target="projectFrame">9. Image Slider</a></li>
+        <li><a href="./10-theme-toggle/index.html" target="projectFrame">10. Theme Toggle</a></li>
+        <li><a href="./11-weather-app/index.html" target="projectFrame">11. Weather App</a></li>
+        <li><a href="./12-sticky-notes/index.html" target="projectFrame">12. Sticky Notes</a></li>
+        <li><a href="./13-keyboard-events-game/index.html" target="projectFrame">13. Keyboard Events</a></li>
+        <li><a href="./14-character-counter/index.html" target="projectFrame">14. Character Counter</a></li>
+        <li><a href="./15-password-generator/index.html" target="projectFrame">15. Password Generator</a></li>
+        <li><a href="./16-qr-code-generator/index.html" target="projectFrame">16. QR Code Generator</a></li>
+        <li><a href="./17-drawing-app/index.html" target="projectFrame">17. Drawing App</a></li>
+        <li><a href="./18-meme-generator/index.html" target="projectFrame">18. Meme Generator</a></li>
+        <li><a href="./19-currency-converter/index.html" target="projectFrame">19. Currency Converter</a></li>
+        <li><a href="./20-drag-drop-upload/index.html" target="projectFrame">20. Drag & Drop Upload</a></li>
+        <li><a href="./21-speech-to-text/index.html" target="projectFrame">21. Speech to Text</a></li>
+        <li><a href="./22-pomodoro-timer/index.html" target="projectFrame">22. Pomodoro Timer</a></li>
+        <li><a href="./23-Location-Finder/index.html" target="projectFrame">23. Location Finder</a></li>
+        <li><a href="./24-Reminder/index.html" target="projectFrame">24. Reminder</a></li>
+        <li><a href="./25-SPA/index.html" target="projectFrame">25. SPA (Single Page Application)</a></li>
+        <li><a href="./26-Selfie-Capture-App/index.html" target="projectFrame">26. Selfie Capture App</a></li>
+      </ul>
     </div>
-  </body>
+
+    <div class="main-content">
+      <iframe src="./01-palindrome-checker/index.html" name="projectFrame"></iframe>
+    </div>
+  </div>
+</body>
 </html>
