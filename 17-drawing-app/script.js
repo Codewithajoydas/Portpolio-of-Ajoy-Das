@@ -18,7 +18,7 @@ canvas.addEventListener("mousemove", (event) => {
   const x = event.offsetX;
   const y = event.offsetY;
 
-  ctx.lineWidth = 2;
+  ctx.lineWidth = 5;
   ctx.lineCap = "round";
   ctx.strokeStyle = "#000";
 
