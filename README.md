@@ -1,13 +1,16 @@
 # 🚀 JavaScript Beginner Projects by Ajoy
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 
 This repository contains various JavaScript projects that demonstrate different functionality and provide hands-on learning experiences for developers. Below is the list of projects included:
 
 ---
 
 ## Open The Website
-
-[![Start Course](https://img.icons8.com/bubbles/100/circled-play.png)](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/)
-
+```base
+https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/
+```
 ---
 
 1. 🔁 **[Palindrome Checker](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/01-palindrome-checker/index.html)**  
