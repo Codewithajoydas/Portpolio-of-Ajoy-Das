@@ -29,4 +29,6 @@ button{
     border: 1px solid #ccc;
     box-shadow: 1px 1px 5px #f7f6f6;
     cursor: pointer;
-}
+}::-webkit-scrollbar{
+      display: none;
+    }

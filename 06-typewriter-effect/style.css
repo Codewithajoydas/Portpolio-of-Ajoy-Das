@@ -37,3 +37,6 @@ p {
   border-right: 0.15em solid orange;
   animation: blink-caret 0.75s step-end infinite;
 }
+::-webkit-scrollbar{
+      display: none;
+    }

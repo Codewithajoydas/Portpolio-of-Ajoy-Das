@@ -16,4 +16,6 @@ p {
     font-size: 1.8em;
     margin: 10px 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
-}
+}::-webkit-scrollbar{
+      display: none;
+    }

@@ -23,3 +23,6 @@ body {
   font-size: 18px;
   cursor: pointer;
 }
+::-webkit-scrollbar{
+      display: none;
+    }

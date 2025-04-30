@@ -20,3 +20,6 @@ p{
      filter:drop-shadow(10px 1px 5px #1a1a1a);
 
 }
+::-webkit-scrollbar{
+      display: none;
+    }

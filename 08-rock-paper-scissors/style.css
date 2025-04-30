@@ -70,4 +70,6 @@ div {
 img{
     aspect-ratio: 1/1;
     width: 100px;
-}
+}::-webkit-scrollbar{
+      display: none;
+    }
