@@ -4,14 +4,16 @@ let timeLabel = document.getElementById("time");
 let totalTimeLabel = document.getElementById("tTime");
 let progress = document.getElementById("progress");
 let coverImg = document.getElementById("cover");
-
+let title = document.getElementById("title");
 const playlist = [
   {
     src: "song1.mp3",
+    name: "Aig kal Ai Aile",
     img: "https://aimlyrics.com/wp-content/uploads/2022/04/maxresdefault-2022-04-04T121440.294.jpg?v=1649052903",
   },
   {
     src: "song2.mp3",
+    name: "Rang-Rangiya",
     img: "https://www.hinditracks.in/wp-content/uploads/2025/04/Rang-Rangiya-Lyrics-in-Hindi.jpg",
   },
 ];
@@ -30,6 +32,7 @@ function loadSong(index) {
   audio.load();
   audio.play();
   playBtn.querySelector("i").classList.replace("bi-play-fill", "bi-pause-fill");
+  title.innerText = playlist[index].name;
 }
 
 audio.addEventListener("loadedmetadata", () => {
@@ -40,6 +43,12 @@ audio.addEventListener("loadedmetadata", () => {
 audio.addEventListener("timeupdate", () => {
   timeLabel.textContent = formatTime(audio.currentTime);
   progress.value = Math.floor(audio.currentTime);
+});
+
+audio.addEventListener("ended", () => {
+  currentIndex = (currentIndex + 1) % playlist.length;
+
+  loadSong(currentIndex);
 });
 
 progress.addEventListener("input", () => {
