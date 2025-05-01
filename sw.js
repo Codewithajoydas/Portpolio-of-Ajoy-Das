@@ -1,12 +1,11 @@
-const CACHE_NAME = "my-pwa-cache-v1";
+const CACHE_NAME = "js-projects-v1";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/styles.css",
-  "/script.js",
-  "/manifest.json",
-  "/icons/icon-192.png",
-  "/icons/icon-512.png",
+  "/JAVASCRIPT-PROJECTS/",
+  "/JAVASCRIPT-PROJECTS/index.html",
+  "/JAVASCRIPT-PROJECTS/manifest.json",
+  "/JAVASCRIPT-PROJECTS/icons/icon-192.png",
+  "/JAVASCRIPT-PROJECTS/icons/icon-512.png",
+  // Add more files like CSS, JS, images as needed
 ];
 
 self.addEventListener("install", (event) => {
