@@ -7,11 +7,16 @@
       name="description"
       content="A collection of JavaScript projects for learning and practice."
     />
+    <base href="/JAVASCRIPT-PROJECTS/" />
+
     <meta
       name="keywords"
       content="JavaScript, projects, web development, coding, tutorials"
     />
     <meta name="author" content="Ajoy Das" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#000000" />
+
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
@@ -300,6 +305,24 @@
         ></iframe>
       </div>
     </div>
+    <script>
+      window.onload = () => {
+        setTimeout(() => {
+          let loader = document.getElementById("loading");
+          loader.style.display = "none";
+        }, 1500);
+      };
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((reg) => console.log("Service Worker registered", reg))
+            .catch((err) =>
+              console.error("Service Worker registration failed", err)
+            );
+        });
+      }
+    </script>
     <script src="index.js"></script>
   </body>
 </html>
