@@ -7,8 +7,12 @@
       name="description"
       content="A collection of JavaScript projects for learning and practice."
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <!-- <base href="/JAVASCRIPT-PROJECTS/" /> -->
-    <base href="/JAVASCRIPT-PROJECTS/" />
+    <!-- <base href="/JAVASCRIPT-PROJECTS/" /> -->
     <meta
       name="keywords"
       content="JavaScript, projects, web development, coding, tutorials"
@@ -147,6 +151,49 @@
       ::-webkit-scrollbar {
         display: none;
       }
+
+      @media screen and (max-width: 800px) {
+        .main-content {
+          position: absolute;
+          height: 100vh;
+          width: 100vw;
+          flex-direction: column;
+        }
+        header {
+          display: flex !important;
+          justify-content: space-between;
+          width: 100vw;
+          padding: 10px 40px;
+          align-items: center;
+        }
+
+        i {
+          font-size: larger;
+          cursor: pointer;
+        }
+        .sidebar {
+          position: relative;
+          z-index: 999;
+        }
+        .sidebar.active {
+          width: 0 !important;
+          transition: all 0.5s;
+          overflow: hidden;
+          opacity: 0;
+          white-space: nowrap;
+        }
+      }
+
+      @media screen and (min-width: 800px) {
+        .sidebar i {
+          display: none !important;
+        }
+      }
+
+      .sidebar a.active-link {
+        background-color: var(--primary-color);
+        color: white;
+      }
     </style>
   </head>
 
@@ -156,46 +203,52 @@
     </div>
     <div class="container">
       <div class="sidebar">
-        <h2>📁 Projects</h2>
+        <span style="display: flex; justify-content: space-around">
+          <h2>📁 Projects</h2>
+          <span style="cursor: pointer">
+            <i class="bi-list-ol" onclick="toggleSidebar()"></i>
+          </span>
+        </span>
+
         <ul>
-          <li>
+          <li accesskey="1">
             <a href="./01-palindrome-checker/index.html" target="projectFrame"
               >1. Palindrome Checker</a
             >
           </li>
-          <li>
+          <li accesskey="2">
             <a
               href="./02-random-quote-generator/index.html"
               target="projectFrame"
               >2. Random Quote Generator</a
             >
           </li>
-          <li>
+          <li accesskey="3">
             <a href="./03-digital-clock/index.html" target="projectFrame"
               >3. Digital Clock</a
             >
           </li>
-          <li>
+          <li accesskey="4">
             <a href="./04-todo-list-app/index.html" target="projectFrame"
               >4. Todo List</a
             >
           </li>
-          <li>
+          <li accesskey="5">
             <a href="./05-form-validation/index.html" target="projectFrame"
               >5. Form Validation</a
             >
           </li>
-          <li>
+          <li accesskey="6">
             <a href="./06-typewriter-effect/index.html" target="projectFrame"
               >6. Typewriter Effect</a
             >
           </li>
-          <li>
+          <li accesskey="7">
             <a href="./07-stopwatch-app/index.html" target="projectFrame"
               >7. Stopwatch App</a
             >
           </li>
-          <li>
+          <li accesskey="8">
             <a href="./08-rock-paper-scissors/index.html" target="projectFrame"
               >8. Rock Paper Scissors</a
             >
@@ -299,6 +352,17 @@
       </div>
 
       <div class="main-content">
+        <header style="display: none">
+          <h2>Projects</h2>
+          <span
+            ><i
+              class="bi bi-list-ol"
+              style="z-index: 1000"
+              onclick="toggleSidebar()"
+            ></i
+          ></span>
+        </header>
+        <br />
         <iframe
           src="./01-palindrome-checker/index.html"
           name="projectFrame"
@@ -314,12 +378,27 @@
       };
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-         navigator.serviceWorker.register("/JAVASCRIPT-PROJECTS/sw.js")
+          navigator.serviceWorker
+            .register("/JAVASCRIPT-PROJECTS/sw.js")
             .then((reg) => console.log("Service Worker registered", reg))
             .catch((err) =>
               console.error("Service Worker registration failed", err)
             );
         });
+      }
+      document.querySelectorAll(".sidebar a").forEach((link) => {
+        link.addEventListener("click", function () {
+          let sidebar = document.querySelector(".sidebar");
+          sidebar.classList.add("active");
+          document
+            .querySelectorAll(".sidebar a")
+            .forEach((el) => el.classList.remove("active-link"));
+          this.classList.add("active-link");
+        });
+      });
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.classList.toggle("active");
       }
     </script>
     <script src="index.js"></script>
