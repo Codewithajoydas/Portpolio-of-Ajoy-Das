@@ -5,7 +5,6 @@ const urlsToCache = [
   "/JAVASCRIPT-PROJECTS/manifest.json",
   "/JAVASCRIPT-PROJECTS/icons/icon-192.png",
   "/JAVASCRIPT-PROJECTS/icons/icon-512.png",
-  // Add more files like CSS, JS, images as needed
 ];
 
 self.addEventListener("install", (event) => {
