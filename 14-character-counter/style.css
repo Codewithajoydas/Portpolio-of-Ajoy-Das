@@ -3,7 +3,7 @@ padding: 10px 20px;
 }
 body{
     font-family: sans-serif;
-    background: #f7f7f7;
+    /* background: #f7f7f7; */
     padding: 20px;
     display: flex;
     justify-content: center;

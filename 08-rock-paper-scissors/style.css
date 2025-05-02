@@ -6,12 +6,12 @@
 }
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  /* background: linear-gradient(135deg, #4e54c8, #8f94fb); */
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
+  /* color: #fff; */
 }
 
 /* Container Styling */

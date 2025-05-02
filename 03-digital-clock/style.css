@@ -6,8 +6,8 @@ body{
     align-items: center;
     padding: 0;
     margin: 0;
-    background: #000;
-    color: #ffffff;
+    /* background: #000;
+    color: #ffffff; */
 }
 .clock{
     display: flex;
