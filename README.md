@@ -1,117 +1,131 @@
-# 🚀 JavaScript Beginner Projects by Ajoy
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+# JavaScript Beginner Projects by Ajoy Das
 
-This repository contains various JavaScript projects that demonstrate different functionality and provide hands-on learning experiences for developers. Below is the list of projects included:
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat\&logo=javascript\&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat\&logo=html5\&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat\&logo=css3\&logoColor=white)
+
+This repository is a collection of beginner-friendly JavaScript projects developed by **Ajoy Das**. Each project is designed to demonstrate specific JavaScript functionality and provide hands-on experience for new developers. It also integrates HTML and CSS for UI design and interaction.
 
 ---
 
-## Open The Website
-```base
+## Live Project Showcase
+
+Browse all the projects live in your browser:
+
+```bash
 https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/
 ```
----
-
-1. 🔁 **[Palindrome Checker](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/01-palindrome-checker/index.html)**  
-   → Checks if a word or sentence is a palindrome in real-time.
-
-2. 💬 **[Random Quote Generator](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/02-random-quote-generator/index.html)**  
-   → Generates a random motivational quote every time you click.
-
-3. ⏰ **[Digital Clock](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/03-digital-clock/index.html)**  
-   → Displays the current time live using JavaScript.
-
-4. ✅ **[Todo List App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/04-todo-list-app/index.html)**  
-   → Add, remove, and track your daily tasks easily.
-
-5. 📝 **[Form Validation](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/05-form-validation/index.html)**  
-   → Validates user input for name, email, and password fields using JavaScript and regular expressions.
-
-6. 🖋️ **[Typewriter Effect](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/06-typewriter-effect/index.html)**  
-   → Simulates a typing effect letter-by-letter for text.
-
-7. ⏱️ **[Stopwatch App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/07-stopwatch-app/index.html)**  
-   → Start, stop, and reset a stopwatch timer.
-
-8. ✊ **[Rock Paper Scissors Game](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/08-rock-paper-scissors/index.html)**  
-   → Play against the computer with random AI choices.
-
-9. 🖼️ **[Image Slider](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/09-image-slider/index.html)**  
-   → Auto and manual image slideshow feature.
-
-10. 🌙 **[Theme Toggle](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/10-theme-toggle/index.html)**  
-    → Switch between light and dark modes dynamically.
-
-11. ☀️ **[Weather App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/11-weather-app/index.html)**  
-    → Detects your location and shows current weather info using Open-Meteo API.
-
-12. 📌 **[Sticky Notes App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/12-sticky-notes/index.html)**  
-    → Add, delete, and save sticky notes using `localStorage`.
-
-13. ⌨️ **[Keyboard Events Game](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/13-keyboard-events-game/index.html)**  
-    → A fun game that listens for keyboard events and interacts with them.
-
-14. 🔢 **[Character Counter](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/14-character-counter/index.html)**  
-    → Count the characters in a text input field as you type.
-
-15. 🔐 **[Password Generator](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/15-password-generator/index.html)**  
-    → Generate strong, random passwords of customizable length.
-
-16. 📱 **[QR Code Generator](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/16-qr-code-generator/index.html)**  
-    → Generate a QR code based on user input.
-
-17. ✏️ **[Drawing App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/17-drawing-app/index.html)**  
-    → A simple drawing app where users can draw using a mouse or touch.
-
-18. 😂 **[Meme Generator](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/18-meme-generator/index.html)**  
-    → Create memes by adding text to random images.
-
-19. 💵 **[Currency Converter](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/19-currency-converter/index.html)**  
-    → Convert currency values based on the latest exchange rates.
-
-20. 🖱️ **[Drag & Drop Upload](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/20-drag-drop-upload/index.html)**  
-    → Allow users to drag and drop files to upload them.
-
-21. 🎤 **[Speech to Text](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/21-speech-to-text/index.html)**  
-    → Convert speech to text using the Web Speech API.
-
-22. ⏲️ **[Pomodoro Timer](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/22-pomodoro-timer/index.html)**  
-    → A Pomodoro technique timer to help you focus and manage tasks. `#ffffff`
-23. 📍 [**Location Finder**](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/23-Location-Finder/index.html)  
-    → Determines and displays your current geographical location using the Geolocation API.
-
-24. ⏰ [**Reminder App**](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/24-Reminder/index.html)  
-    → Set reminders for tasks and receive alerts at specified times.
-
-25. 🧭 [**Single Page Application (SPA)**](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/25-SPA/index.html)  
-    → A simple SPA demonstrating dynamic content loading without page refreshes.
-
-26. 🤳 [**Selfie Capture App**](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/26-Selfie-Capture-App/index.html)  
-    → Accesses your webcam to capture selfies directly from the browser.
 
 ---
 
-Each of these projects is designed to help beginners learn and practice JavaScript. Feel free to explore them and contribute improvements or new features!
+## Project List
 
-## How to Run
+1. **[Palindrome Checker](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/01-palindrome-checker/index.html)**
+   Checks if a word or sentence is a palindrome in real-time.
 
-1. Clone the repository:
+2. **[Random Quote Generator](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/02-random-quote-generator/index.html)**
+   Displays a new random motivational quote on each click.
 
-   ```base
+3. **[Digital Clock](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/03-digital-clock/index.html)**
+   A real-time digital clock built with JavaScript.
+
+4. **[Todo List App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/04-todo-list-app/index.html)**
+   Allows users to add, complete, and remove tasks.
+
+5. **[Form Validation](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/05-form-validation/index.html)**
+   Validates name, email, and password fields using regular expressions.
+
+6. **[Typewriter Effect](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/06-typewriter-effect/index.html)**
+   Simulates a typing animation for text.
+
+7. **[Stopwatch App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/07-stopwatch-app/index.html)**
+   Provides start, stop, and reset functions for time tracking.
+
+8. **[Rock Paper Scissors Game](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/08-rock-paper-scissors/index.html)**
+   A classic game implementation with computer-generated choices.
+
+9. **[Image Slider](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/09-image-slider/index.html)**
+   Automatic and manual image slideshow feature.
+
+10. **[Theme Toggle](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/10-theme-toggle/index.html)**
+    Switch between light and dark modes dynamically.
+
+11. **[Weather App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/11-weather-app/index.html)**
+    Detects user location and displays current weather data using Open-Meteo API.
+
+12. **[Sticky Notes App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/12-sticky-notes/index.html)**
+    Add, delete, and persist sticky notes using `localStorage`.
+
+13. **[Keyboard Events Game](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/13-keyboard-events-game/index.html)**
+    Interactive game responding to keyboard input.
+
+14. **[Character Counter](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/14-character-counter/index.html)**
+    Counts and displays the number of characters as you type.
+
+15. **[Password Generator](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/15-password-generator/index.html)**
+    Generates strong, random passwords with customizable options.
+
+16. **[QR Code Generator](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/16-qr-code-generator/index.html)**
+    Converts user input into a QR code.
+
+17. **[Drawing App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/17-drawing-app/index.html)**
+    Allows users to draw freely using mouse or touch input.
+
+18. **[Meme Generator](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/18-meme-generator/index.html)**
+    Creates memes by overlaying text on random images.
+
+19. **[Currency Converter](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/19-currency-converter/index.html)**
+    Converts currencies using up-to-date exchange rates.
+
+20. **[Drag & Drop Upload](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/20-drag-drop-upload/index.html)**
+    Enables file upload via drag-and-drop functionality.
+
+21. **[Speech to Text](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/21-speech-to-text/index.html)**
+    Converts spoken words into text using the Web Speech API.
+
+22. **[Pomodoro Timer](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/22-pomodoro-timer/index.html)**
+    Implements the Pomodoro technique to boost productivity.
+
+23. **[Location Finder](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/23-Location-Finder/index.html)**
+    Uses the Geolocation API to detect and display your current location.
+
+24. **[Reminder App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/24-Reminder/index.html)**
+    Set task reminders and receive timed notifications.
+
+25. **[Single Page Application (SPA)](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/25-SPA/index.html)**
+    Demonstrates dynamic content updates without reloading the page.
+
+26. **[Selfie Capture App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/26-Selfie-Capture-App/index.html)**
+    Accesses the webcam to take photos directly from the browser.
+
+---
+
+## Getting Started
+
+1. **Clone the repository:**
+
+   ```bash
    git clone https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS
    ```
 
-2. Open the project files in your browser to view and interact with them.
+2. **Open the project folders and run the `.html` files in your browser.**
 
 ---
 
-### Contributing
+## Contribution Guidelines
 
-Feel free to fork this repository, create a branch, make changes, and submit a pull request. Contributions are always welcome!
+Contributions are welcome. You can:
+
+* Fork the repository
+* Create a feature branch
+* Make changes and commit
+* Submit a pull request
+
+Please keep your code clean and well-documented.
 
 ---
 
-### License
+## License
 
-This project is open-source and available under the MIT License.
+This project is licensed under the **MIT License**. You are free to use, modify, and distribute this code with proper attribution.
+
