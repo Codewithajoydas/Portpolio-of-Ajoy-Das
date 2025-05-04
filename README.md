@@ -101,7 +101,7 @@ https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/
 27. **[Music Player](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/27-Music-player/index.html)**
     Plays audio files with controls for play, pause, and skip.
     
-28. **[Music Player](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/28-FM/index.html)**
+28. **[FM](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/28-FM/index.html)**
     Streams live radio stations over the internet.
     
     
