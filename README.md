@@ -128,32 +128,32 @@ Implements the Pomodoro technique to boost productivity.
 
 ![Pomodoro Timer](screenshots/22.png)
 
-### 23. [Location Finder](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/23-location-finder/index.html)
+### 23. [Location Finder](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/23-Location-Finder/index.html)
 Uses the Geolocation API to detect and display your current location.
 
 ![Location Finder](screenshots/23.png)
 
-### 24. [Reminder App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/24-reminder-app/index.html)
+### 24. [Reminder App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/24-Reminder/index.html)
 Set task reminders and receive timed notifications.
 
 ![Reminder App](screenshots/24.png)
 
-### 25. [Single Page Application (SPA)](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/25-single-page-application-spa/index.html)
+### 25. [Single Page Application (SPA)](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/25-SPA/index.html)
 Demonstrates dynamic content updates without reloading the page.
 
 ![Single Page Application (SPA)](screenshots/25.png)
 
-### 26. [Selfie Capture App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/26-selfie-capture-app/index.html)
+### 26. [Selfie Capture App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/26-Selfie-Capture-App/index.html)
 Accesses the webcam to take photos directly from the browser.
 
 ![Selfie Capture App](screenshots/26.png)
 
-### 27. [Music Player](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/27-music-player/index.html)
+### 27. [Music Player](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/27-Music-player/index.html)
 Plays audio files with controls for play, pause, and skip.
 
 ![Music Player](screenshots/27.png)
 
-### 28. [FM](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/28-fm/index.html)
+### 28. [FM](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/28-FM/index.html)
 Streams live radio stations over the internet.
 
 ![FM](screenshots/28.png)
