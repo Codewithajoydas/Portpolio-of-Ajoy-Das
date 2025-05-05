@@ -7,9 +7,28 @@
       name="description"
       content="A collection of JavaScript projects for learning and practice."
     />
+    <meta property="og:title" content="JavaScript Projects by Ajoy Das" />
+    <meta
+      property="og:description"
+      content="30+ JS projects to learn and explore."
+    />
+    <meta
+      property="og:image"
+      content="https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/icons/icon-192.png"
+    />
+    <meta
+      property="og:url"
+      content="https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
     <!-- <base href="/JAVASCRIPT-PROJECTS/" /> -->
     <!-- <base href="/JAVASCRIPT-PROJECTS/" /> -->
@@ -180,7 +199,6 @@
         }
         .sidebar {
           position: relative;
-          z-index: 999;
         }
         .sidebar.active {
           width: 0 !important;
@@ -188,6 +206,10 @@
           overflow: hidden;
           opacity: 0;
           white-space: nowrap;
+          z-index: 9999;
+        }
+        .sidebar a {
+          display: none !important;
         }
       }
 
@@ -219,15 +241,28 @@
           <span style="display: flex; justify-content: space-around">
             <h2>📁 Projects</h2>
             <span style="cursor: pointer">
+              <a
+                class="github-button"
+                href="https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS"
+                data-color-scheme="no-preference: light; light: light; dark: dark;"
+                data-size="large"
+                data-show-count="true"
+                aria-label="Star Codewithajoydas/JAVASCRIPT-PROJECTS on GitHub"
+                >Star</a
+              >
+
               <i class="bi-list-ol" onclick="toggleSidebar()"></i>
             </span>
           </span>
-
+          <input
+            type="text"
+            id="search"
+            placeholder="Search projects..."
+            style="margin-bottom: 10px; padding: 8px; width: 100%"
+          />
           <ul>
             <li accesskey="1">
-              <a
-                href="./01-palindrome-checker/index.html"
-                target="projectFrame"
+              <a href="./01-palindrome-checker/index.html" target="projectFrame"
                 >1. Palindrome Checker</a
               >
             </li>
@@ -407,18 +442,31 @@
             ></i
           ></span>
         </header>
-        <iframe src="" name="projectFrame">
-          Loading....
-        </iframe>
+        <!-- Place this tag where you want the button to render. -->
+        <iframe src="" name="projectFrame"> Loading.... </iframe>
+        <button
+          href="#"
+          target="_blank"
+          onclick="document.querySelector('.sidebar').scrollTo({top: 0, behavior: 'smooth'})"
+          style="
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: large;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            background: #6342f1;
+            border: none;
+            color: white;
+          "
+        >
+          <i class="bi-arrow-bar-up"></i>
+        </button>
       </div>
     </div>
     <script>
-      window.onload = () => {
-        setTimeout(() => {
-          let loader = document.getElementById("loading");
-          loader.style.display = "none";
-        }, 1500);
-      };
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
@@ -449,8 +497,7 @@
       });
 
       function toggleSidebar() {
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.classList.toggle("active");
+        document.querySelector(".sidebar").classList.toggle("active");
       }
       window.addEventListener("load", () => {
         const iframe = document.querySelector("iframe");
@@ -460,7 +507,25 @@
           iframe.src = hashUrl;
         }
       });
+
+      document.getElementById("search").addEventListener("keyup", function () {
+        const val = this.value.toLowerCase();
+        document.querySelectorAll(".sidebar li").forEach((li) => {
+          li.style.display = li.innerText.toLowerCase().includes(val)
+            ? "block"
+            : "none";
+        });
+      });
+
+      window.onload = () => {
+        setTimeout(() => {
+          let loader = document.getElementById("loading");
+          loader.style.display = "none";
+        }, 1500);
+      };
     </script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
