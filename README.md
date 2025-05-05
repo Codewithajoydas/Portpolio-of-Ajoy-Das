@@ -157,7 +157,17 @@ Plays audio files with controls for play, pause, and skip.
 Streams live radio stations over the internet.
 
 ![FM](screenshots/28.png)
-    
+
+### 29. [Ripple Effect](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/29-Ripple-Effect/index.html)
+A Button with Ripple Effect
+
+[!Ripple Effect](screenshots/29.png)
+
+### 30. [Custom Cursor](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/30-custom-cursor/index.html)
+Custom Cursor
+
+[!Custom Cursor](screenshots/30.png)
+
 ---
 
 ## Getting Started
