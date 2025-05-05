@@ -9,6 +9,7 @@ This repository is a collection of beginner-friendly JavaScript projects develop
 ---
 
 ## Live Project Showcase
+![Untitled video - Made with Clipchamp (2)](https://github.com/user-attachments/assets/2cb3f440-0c02-4160-8693-cf1dac8b8341)
 
 Browse all the projects live in your browser:
 
