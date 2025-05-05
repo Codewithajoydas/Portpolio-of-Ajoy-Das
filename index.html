@@ -225,7 +225,9 @@
 
           <ul>
             <li accesskey="1">
-              <a href="./01-palindrome-checker/index.html" target="projectFrame" class="active-link"
+              <a
+                href="./01-palindrome-checker/index.html"
+                target="projectFrame"
                 >1. Palindrome Checker</a
               >
             </li>
@@ -382,7 +384,12 @@
             </li>
             <li>
               <a href="./31.RadiusMaster/index.html" target="projectFrame">
-               31. RadiusMaster
+                31. RadiusMaster
+              </a>
+            </li>
+            <li>
+              <a href="./32.quiz/index.html" target="projectFrame">
+                32. Quiz App
               </a>
             </li>
           </ul>
@@ -400,10 +407,7 @@
             ></i
           ></span>
         </header>
-        <iframe
-          src="./01-palindrome-checker/index.html"
-          name="projectFrame"
-        ></iframe>
+        <iframe src="" name="projectFrame"></iframe>
       </div>
     </div>
     <script>
@@ -425,6 +429,15 @@
       }
       document.querySelectorAll(".sidebar a").forEach((link) => {
         link.addEventListener("click", function (e) {
+          // e.preventDefault(); // prevent default navigation
+
+          const iframe = document.querySelector("iframe");
+          const pageUrl = this.getAttribute("href"); // get href from <a>
+
+          iframe.src = pageUrl; // load URL into iframe
+          window.location.hash = `#/${pageUrl}`; // update URL hash
+
+          // UI updates
           document
             .querySelectorAll(".sidebar a")
             .forEach((el) => el.classList.remove("active-link"));
@@ -437,12 +450,13 @@
         const sidebar = document.querySelector(".sidebar");
         sidebar.classList.toggle("active");
       }
+      window.addEventListener("load", () => {
+        const iframe = document.querySelector("iframe");
+        const hashUrl = window.location.hash.slice(2); // remove '#/'
 
-      let iframe = document.querySelector("iframe");
-      iframe.addEventListener("click", () => {
-        let download = document.getElementById("dnl");
-        download.href = iframe.src;
-        download.innerText = iframe.src;
+        if (hashUrl) {
+          iframe.src = hashUrl;
+        }
       });
     </script>
     <script src="index.js"></script>
