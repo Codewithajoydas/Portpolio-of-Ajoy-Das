@@ -12,3 +12,15 @@ if ("serviceWorker" in navigator) {
       .catch((err) => console.error("Service Worker registration failed", err));
   });
 }
+// document.querySelectorAll("a").forEach((li) => {
+//   li.addEventListener("mouseenter", (e) => {
+//     let iframe = document.querySelector('iframe');
+//     iframe.src = e.currentTarget.href;
+
+//   });
+
+//   li.addEventListener("mouseleave", () => {
+//     const iframe = li.querySelector("iframe");
+//     if (iframe) iframe.remove();
+//   });
+// });
