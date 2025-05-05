@@ -73,7 +73,7 @@ Detects user location and displays current weather data using Open-Meteo API.
 
 ![Weather App](screenshots/11.png)
 
-### 12. [Sticky Notes App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/12-sticky-notes-app/index.html)
+### 12. [Sticky Notes App](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/12-sticky-notes/index.html)
 Add, delete, and persist sticky notes using `localStorage`.
 
 ![Sticky Notes App](screenshots/12.png)
