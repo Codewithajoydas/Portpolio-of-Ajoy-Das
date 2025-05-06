@@ -16,12 +16,6 @@ This repository is a collection of beginner-friendly JavaScript projects develop
 )
 
 ---
-Certainly! Here's a comprehensive table showcasing all 30 beginner-friendly JavaScript projects by **Ajoy Das**, complete with live demos and preview screenshots:
-
----
-
-## 📁 JavaScript Projects by Ajoy Das
-
 | #  | Project Name                  | Preview Screenshot        | Description                                            | Live Demo                                                                                            |
 | -- | ----------------------------- | ------------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
 | 1  | Palindrome Checker            | ![1](screenshots/1.png)   | Checks whether input is the same forward and backward. | [Live](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/01-palindrome-checker/index.html)       |
