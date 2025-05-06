@@ -445,8 +445,6 @@
         <!-- Place this tag where you want the button to render. -->
         <iframe src="" name="projectFrame"> Loading.... </iframe>
         <button
-          href="#"
-          target="_blank"
           onclick="document.querySelector('.sidebar').scrollTo({top: 0, behavior: 'smooth'})"
           style="
             position: fixed;
@@ -460,7 +458,10 @@
             background: #6342f1;
             border: none;
             color: white;
+            opacity: 0;
+            transition: all 1s;
           "
+          id="scrollTopBtn"
         >
           <i class="bi-arrow-bar-up"></i>
         </button>
@@ -516,6 +517,22 @@
             : "none";
         });
       });
+      const sidebar = document.querySelector(".sidebar");
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      // Show/hide the button on scroll
+      sidebar.addEventListener("scroll", () => {
+        if (sidebar.scrollTop > 10) {
+          scrollTopBtn.style.opacity = "1";
+        } else {
+          scrollTopBtn.style.opacity = "0";
+        }
+      });
+
+      // Trigger once on page load
+      if (sidebar.scrollTop > 10) {
+        scrollTopBtn.style.opacity = "0";
+      }
 
       window.onload = () => {
         setTimeout(() => {
