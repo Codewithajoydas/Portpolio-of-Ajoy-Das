@@ -11,11 +11,9 @@ This repository is a collection of beginner-friendly JavaScript projects develop
 ## Live Project Showcase
 ![Untitled video - Made with Clipchamp (2)](https://github.com/user-attachments/assets/2cb3f440-0c02-4160-8693-cf1dac8b8341)
 
-Browse all the projects live in your browser:
-
-```bash
-https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/
-````
+### Browse all the projects live in your browser:
+[![Open with Browser](https://img.shields.io/badge/Open_with-Browser-blue?logo=googlechrome)]([https://example.com](https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/
+)
 
 ---
 
