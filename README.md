@@ -52,20 +52,6 @@ This repository is a collection of beginner-friendly JavaScript projects develop
 
 ---
 
-[1]: https://www.wired.com/2013/01/open-source-rookies-of-year?utm_source=chatgpt.com "Microsoft, Yahoo Among Open Source 'Rookies of the Year'"
-[2]: https://www.wired.com/beyond-the-beyond/2017/02/github-work-awesome-creative-coding?utm_source=chatgpt.com "Github work by Awesome Creative Coding"
-[3]: https://codingtorque.com/50-javascript-projects-with-source-code/?utm_source=chatgpt.com "50 JavaScript Projects with Source Code - Coding Torque"
-[4]: https://skillcrush.com/blog/projects-you-can-do-with-javascript/?utm_source=chatgpt.com "21 Easy JavaScript Projects for Beginners (Code included!) - Skillcrush"
-[5]: https://hackr.io/blog/javascript-projects?utm_source=chatgpt.com "16 Best JavaScript Projects for Beginners [With Source Code] - Hackr"
-[6]: https://dev.to/shantanu_jana/100-javascript-projects-with-source-code-59lo?utm_source=chatgpt.com "100+ JavaScript Projects With Source Code - DEV Community"
-[7]: https://www.geeksforgeeks.org/top-javascript-projects/?utm_source=chatgpt.com "Top 95+ Javascript Projects For 2025 | GeeksforGeeks"
-[8]: https://algocademy.com/blog/15-fun-javascript-projects-for-beginners-to-boost-your-coding-skills/?utm_source=chatgpt.com "15 Fun JavaScript Projects for Beginners to Boost Your Coding Skills"
-[9]: https://mikkegoes.com/javascript-projects-for-beginners/?utm_source=chatgpt.com "24 JavaScript Projects For Beginners In 2025 (With Source Code)"
-[10]: https://github.com/romeojeremiah/javascript-projects-for-beginners?utm_source=chatgpt.com "100+ Javascript Projects for Beginners by JSBeginners.com"
-[11]: https://www.codingnepalweb.com/best-30-javascript-projects-with-source-code/?utm_source=chatgpt.com "Best 30+ JavaScript Projects for Practice (With Source Code)"
-
----
-
 ## Getting Started
 
 1. **Clone the repository:**
