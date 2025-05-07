@@ -14,35 +14,11 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         /* background-color: #1f1f1f; */
         /* color: #fff; */
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
         margin: 0;
       }
 
-      nav {
-        padding: 20px;
-        position: absolute;
-        top: 0;
-        right: 20px;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-      }
-
-      nav a {
-        text-decoration: none;
-        /* color: white; */
-        font-weight: bold;
-        color: #000;
-        transition: color 0.3s;
-      }
-
-      nav a:hover {
-        color: chartreuse;
-      }
-
+     
       main {
         display: flex;
         justify-content: space-between;
@@ -114,31 +90,44 @@
         /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
       }
 
-      @media (max-width: 900px) {
+      @media screen and (max-width: 900px) {
         main {
           flex-direction: column;
           text-align: center;
+          display: block;
+          padding: 0 !important;
         }
-
-        nav {
-          position: static;
-          text-align: center;
-          margin-top: 20px;
-        }
-
-        nav ul {
-          flex-direction: column;
-        }
-
         .buttons {
           justify-content: center;
           flex-wrap: wrap;
+        }
+        .image-wrapper img {
+          max-width: 100%;
+          position: relative;
+          width: 100vw !important;
+          right: 0;
+          border-radius: 12px;
+        }
+        #two {
+          display: none;
+        }
+        #one {
+          display: block !important;
+          position: fixed;
+          left: 0;
+          height: 100vh;
+          z-index: -1;
+          opacity: 0.7;
+        }
+        .content {
+          margin-top: 100px;
         }
       }
     </style>
   </head>
   <body>
     <main>
+      <img src="./screenshots/Ajoy.png" alt="Photo of Ajoy Das" style="display: none;" id="one" />
       <div class="content">
         <h1>
           Hi 👋,<br />
@@ -159,16 +148,17 @@
           <a href="mailto:codewithajoydas@gmail.com"
             ><button class="btn1">HIRE ME</button></a
           >
-          <a href="https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/projects.html"
+          <a
+            href="https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/projects.html"
             ><button class="btn">SEE MY PROJECTS</button></a
           >
         </div>
-        <br>
-        <br>
-        <br>
+        <br />
+        <br />
+        <br />
       </div>
       <div class="image-wrapper">
-        <img src="./screenshots/Ajoy.png" alt="Photo of Ajoy Das" />
+        <img src="./screenshots/Ajoy.png" alt="Photo of Ajoy Das" id="two" />
       </div>
     </main>
   </body>

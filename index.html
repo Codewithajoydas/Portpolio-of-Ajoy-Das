@@ -14,6 +14,7 @@
 
       body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transition: all 1s !important;
       }
 
       nav {
@@ -21,6 +22,7 @@
         position: absolute;
         top: 0;
         right: 20px;
+        transition: all 0.3s ease;
       }
 
       nav ul {
@@ -40,56 +42,99 @@
         color: chartreuse;
       }
 
-     
+      .span1 {
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
       @media (max-width: 900px) {
-        main {
+        nav {
+          position: fixed;
+          width: 0%;
+          overflow: hidden;
+          opacity: 0;
+          display: flex;
+          left: 0;
+          justify-content: center;
+          align-items: center;
           flex-direction: column;
-          text-align: center;
+          height: 0;
+          background: #0000004d;
+          color: white !important;
+          z-index: 9;
+          font-size: larger;
+          backdrop-filter: blur(10px);
         }
 
-        nav {
-          position: static;
-          text-align: center;
-          margin-top: 20px;
+        nav.active {
+          /* display: block; */
+          width: 100vw !important;
+          height: 100vh !important;
+          opacity: 1 !important;
         }
 
         nav ul {
           flex-direction: column;
+          align-items: center;
+        }
+
+        .span1 {
+          display: block;
+          z-index: 9999;
         }
       }
-      ::-webkit-scrollbar{
+
+      ::-webkit-scrollbar {
         display: none;
       }
-    .fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
 
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
   </head>
   <body>
+    <span class="span1">☰ Menu</span>
     <nav>
       <ul>
         <li><a href="#/landing" data-link>Home</a></li>
         <li><a href="#/about" data-link>About</a></li>
         <li><a href="#/skills" data-link>Skills</a></li>
-        <!-- <li><a href="#/experience" data-link>Experience</a></li> -->
-        <li><a href="#/education" data-link=>Education</a></li>
+        <li><a href="#/education" data-link>Education</a></li>
         <li><a href="#/contact" data-link>Contact</a></li>
       </ul>
     </nav>
 
     <main id="app" class="fade-in"></main>
+
+    <script>
+      const menuBtn = document.querySelector('.span1');
+      const nav = document.querySelector('nav');
+
+      menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+      document.querySelectorAll("li").forEach((a)=>{
+        a.addEventListener('click', () => {
+          nav.classList.remove('active');
+        })
+      })
+    </script>
     <script src="router.js"></script>
   </body>
 </html>

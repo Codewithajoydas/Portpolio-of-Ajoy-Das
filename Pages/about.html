@@ -24,7 +24,7 @@
 
       .about-container {
         background: #fff;
-        display: flex;
+        /* display: flex; */
         height: 400px;
         max-width: 900px;
         width: 100%;
@@ -91,6 +91,30 @@
       .social-icons a:hover {
         color: #f72585;
       }
+    @media screen and (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .image-section {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+  }
+  .image-section img{
+    width: 50%;
+  }
+  body{
+    display: block;
+  }
+  .content-section {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
     </style>
   </head>
   <body>
