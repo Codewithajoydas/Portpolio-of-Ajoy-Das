@@ -74,6 +74,7 @@
       .container {
         display: flex;
         height: 100vh;
+        transition: all 1s !important;
       }
 
       .sidebar {
@@ -83,7 +84,7 @@
         padding: 20px;
         box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
         overflow-y: scroll;
-        transition: all 0.3s ease;
+        transition: all 0.3s !important;
         height: 100vh;
       }
 
@@ -149,9 +150,11 @@
 
         .sidebar {
           width: 100%;
-          height: auto;
+          /* height: auto; */
           box-shadow: none;
           border-bottom: 1px solid #ddd;
+          opacity: 1;
+          transition: all 1s !important;
         }
 
         .main-content {
@@ -192,25 +195,30 @@
           padding: 10px 40px;
           align-items: center;
         }
-
+        li {
+          z-index: 1000 !important;
+        }
         i {
           font-size: larger;
           cursor: pointer;
         }
         .sidebar {
           position: relative;
+          transition: all 1s !important;
+          width: 0 !important;
         }
         .sidebar.active {
-          width: 0 !important;
+          width: 100vw !important ;
           transition: all 0.5s;
-          overflow: hidden;
-          opacity: 0;
+          /* overflow: hidden; */
+          height: 100vh !important;
           white-space: nowrap;
-          z-index: 9999;
+          z-index: 9;
+          /* background: #000; */
         }
-        .sidebar a {
+        /* .sidebar a {
           display: none !important;
-        }
+        } */
       }
 
       @media screen and (min-width: 800px) {
@@ -236,11 +244,11 @@
       <img src="loading.gif" width="200px" alt="" />
     </div>
     <div class="container">
-      <div style="height: 100vh">
+      <div style="height: 100vh; transition: all 1s;">
         <div class="sidebar">
-          <span style="display: flex; justify-content: space-around">
+          <span style="display: flex; justify-content: space-between; align-items: center;">
             <h2>📁 Projects</h2>
-            <span style="cursor: pointer">
+            <span style="cursor: pointer;display: flex; justify-content: space-between; align-items: center; gap:20px">
               <a
                 class="github-button"
                 href="https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS"
@@ -443,7 +451,7 @@
           ></span>
         </header>
         <!-- Place this tag where you want the button to render. -->
-        <iframe src="" name="projectFrame"> Loading.... </iframe>
+        <iframe src="./01-palindrome-checker/index.html" name="projectFrame"> Loading.... </iframe>
         <button
           onclick="document.querySelector('.sidebar').scrollTo({top: 0, behavior: 'smooth'})"
           style="
@@ -493,13 +501,14 @@
             .querySelectorAll(".sidebar a")
             .forEach((el) => el.classList.remove("active-link"));
           this.classList.add("active-link");
-          document.querySelector(".sidebar").classList.add("active");
+          document.querySelector(".sidebar").classList.remove("active");
         });
       });
 
       function toggleSidebar() {
         document.querySelector(".sidebar").classList.toggle("active");
       }
+
       window.addEventListener("load", () => {
         const iframe = document.querySelector("iframe");
         const hashUrl = window.location.hash.slice(2); // remove '#/'
