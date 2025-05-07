@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        /* background: linear-gradient(to right, #f72585, #f72585); */
+        color: #333;
+        display: flex;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .about-container {
+        background: #fff;
+        display: flex;
+        height: 400px;
+        max-width: 900px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: scroll;
+        position: relative;
+        text-align: center;
+      }
+
+      .image-section {
+        /* background: #f72585; */
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 300px;
+        height: 400px;
+      }
+
+      .image-section img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        border-radius: 10px;
+        filter: grayscale(100%) contrast(1.2);
+      }
+      .image-section img:hover {
+        filter: grayscale(0);
+        transform: scale(1.2);
+      }
+      .content-section {
+        flex: 2;
+        padding: 40px;
+        margin-left: 300px;
+      }
+
+      .content-section h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+
+      .content-section h3 {
+        color: #f72585;
+        margin-bottom: 20px;
+      }
+
+      .content-section p {
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .social-icons a {
+        text-decoration: none;
+        margin-right: 15px;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .social-icons a:hover {
+        color: #f72585;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="about-container">
+      <div class="image-section">
+        <img src="../screenshots/me.png" alt="Profile" draggable="false" />
+      </div>
+      <div class="content-section">
+        <h1>ABOUT ME</h1>
+        <h3>Ajoy Das – Developer</h3>
+        <p>
+          I’m a passionate software developer focused on crafting beautiful and
+          functional web applications. I specialize in front-end technologies
+          like HTML, CSS, JavaScript, and React, while also diving deep into
+          backend tools such as Node.js, Express, MongoDB, and Firebase.
+        </p>
+        <p>
+          I love solving real-world problems through code and continuously
+          learning new technologies. My journey began with curiosity and has
+          grown into a mission to build clean, scalable, and impactful software.
+        </p>
+        <p>
+          Apart from coding, I enjoy contributing to open-source projects,
+          writing tech blogs, and mentoring fellow developers. I also have a
+          strong interest in UI/UX design and often experiment with design
+          systems to enhance user experience.
+        </p>
+
+        <ul style="text-align: left; line-height: 2;">
+          <li>
+            <strong>Education:</strong> B.Sc in Software Engineering (Expected
+            2026)
+          </li>
+          <li><strong>Location:</strong> India</li>
+          <li>
+            <strong>Experience:</strong> 2+ years in full-stack web development
+          </li>
+          <li>
+            <strong>Current Focus:</strong> Building AI-based web tools and SaaS
+            apps
+          </li>
+        </ul>
+        <br />
+        <div class="social-icons">
+          <a href="https://yourportfolio.com" target="_blank" title="Website"
+            >🌐</a
+          >
+          <a
+            href="https://twitter.com/yourhandle"
+            target="_blank"
+            title="Twitter"
+            >🐦</a
+          >
+          <a
+            href="https://linkedin.com/in/yourprofile"
+            target="_blank"
+            title="LinkedIn"
+            >💼</a
+          >
+          <a href="mailto:your.email@example.com" title="Email">📧</a>
+          <a
+            href="https://github.com/ajoydas-official"
+            target="_blank"
+            title="GitHub"
+            >🐙</a
+          >
+        </div>
+        <br />
+      </div>
+    </div>
+  </body>
+</html>

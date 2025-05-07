@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills Section</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+        /* background-color: #0f0f0f; */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* color: white; */
+      }
+
+      .skills-section {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 20px;
+        /* background-color: #1c1c1c; */
+        text-align: center;
+        /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.6); */
+      }
+
+      .skills-section h1 {
+        /* color: #3cff00; */
+        margin-bottom: 10px;
+      }
+
+      .skills-section p {
+        color: #aaa;
+        font-size: 14px;
+        margin-bottom: 40px;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+        justify-items: center;
+      }
+
+      .skill {
+        /* background-color: #111; */
+        border-radius: 10px;
+        padding: 20px;
+        width: 120px;
+        height: 100px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .skill:hover {
+        transform: translateY(-5px);
+        background-color: #c2c2c2;
+      }
+
+      .skill img {
+        height: 40px;
+        aspect-ratio: 4/6;
+      }
+
+      .skill-name {
+        font-size: 14px;
+        color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <br />
+
+    <section class="skills-section">
+      <h1>My Skills</h1>
+      <br>
+      <p>
+        I specialize in front-end and back-end web development with a strong
+        focus on modern technologies. My skill set includes creating responsive
+        interfaces using HTML, CSS, SASS, and JavaScript, as well as building
+        dynamic applications with React.js and Node.js. I also work with tools
+        like GitHub for version control, Firebase for backend services, and
+        MongoDB for database management. I am continuously learning and
+        expanding my expertise in DevOps with Docker to streamline deployment
+        workflows.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/500px-HTML5_logo_and_wordmark.svg.png"
+            alt="HTML"
+          />
+          <div class="skill-name">HTML</div>
+        </div>
+        <div class="skill">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+            alt="CSS"
+          />
+          <div class="skill-name">CSS</div>
+        </div>
+        <div class="skill">
+          <img
+            src="https://cdn.freebiesupply.com/logos/large/2x/sass-1-logo-png-transparent.png"
+            alt="SASS"
+          />
+          <div class="skill-name">SASS</div>
+        </div>
+        <div class="skill">
+          <img
+            src="https://icon2.cleanpng.com/20180810/uck/2486e00a47e6ee6e1e08100d026a2a5e.webp"
+            alt="JavaScript"
+          />
+          <div class="skill-name">JAVASCRIPT</div>
+        </div>
+        <div class="skill">
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+            alt="React"
+          />
+          <div class="skill-name">REACT JS</div>
+        </div>
+        <div class="skill">
+          <img
+            src="https://w7.pngwing.com/pngs/646/324/png-transparent-github-computer-icons-github-logo-monochrome-head-thumbnail.png"
+            alt="GitHub"
+          />
+          <div class="skill-name">GITHUB</div>
+        </div>
+        <div class="skill">
+          <img
+            src="https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png"
+            alt="Node.js"
+          />
+          <div class="skill-name">NODE JS</div>
+        </div>
+        <div class="skill">
+          <img
+            src="https://cdn.iconscout.com/icon/free/png-256/free-firebase-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-3-pack-logos-icons-2944871.png?f=webp"
+            alt="Firebase"
+          />
+          <div class="skill-name">FIREBASE</div>
+        </div>
+        <div class="skill">
+          <img
+            src="https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png"
+            alt="MongoDB"
+          />
+          <div class="skill-name">MONGODB</div>
+        </div>
+        <div class="skill">
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png"
+            alt="Docker"
+          />
+          <div class="skill-name">DOCKERS</div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

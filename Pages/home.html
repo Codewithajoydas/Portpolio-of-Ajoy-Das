@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* background-color: #1f1f1f; */
+        /* color: #fff; */
+        overflow-y: hidden;
+        margin: 0;
+      }
+
+      nav {
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        right: 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        /* color: white; */
+        font-weight: bold;
+        color: #000;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: chartreuse;
+      }
+
+      main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 40px 40px 40px;
+        height: 100vh;
+        gap: 40px;
+      }
+
+      .content {
+        max-width: 600px;
+      }
+
+      .content h1 {
+        font-size: 40px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+      }
+
+      .content p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn,
+      .btn1 {
+        padding: 15px 25px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn {
+        background-color: black;
+        color: white;
+      }
+
+      .btn1 {
+        background-color: #f2f2f2;
+        color: #000;
+        border: 1px solid #000;
+      }
+
+      .btn:hover {
+        background-color: #ffffff;
+        border: 1px solid black;
+        color: black;
+      }
+
+      .btn1:hover {
+        background-color: #000000;
+        color: white;
+      }
+
+      .image-wrapper img {
+        max-width: 100%;
+        height: 90vh;
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+        border-radius: 12px;
+        /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
+      }
+
+      @media (max-width: 900px) {
+        main {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        nav {
+          position: static;
+          text-align: center;
+          margin-top: 20px;
+        }
+
+        nav ul {
+          flex-direction: column;
+        }
+
+        .buttons {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <h1>
+          Hi 👋,<br />
+          I'm Ajoy,<br />
+          A fullstack <span style="color: rgb(255, 140, 0)">Web</span> &
+          <span style="color: chartreuse">App</span> Developer
+        </h1>
+        <p>
+          I am a passionate and dedicated software engineer who has been
+          building websites and applications since 2020. With a strong eye for
+          detail and a solid foundation in web development, I currently work
+          remotely focusing primarily on front-end development using HTML, CSS,
+          and JavaScript. I'm always eager to learn new technologies. Feel free
+          to reach out if you need help with a project or have questions about
+          my work!
+        </p>
+        <div class="buttons">
+          <a href="mailto:codewithajoydas@gmail.com"
+            ><button class="btn1">HIRE ME</button></a
+          >
+          <a href="../projects.html"
+            ><button class="btn">SEE MY PROJECTS</button></a
+          >
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class="image-wrapper">
+        <img src="./screenshots/Ajoy.png" alt="Photo of Ajoy Das" />
+      </div>
+    </main>
+  </body>
+</html>

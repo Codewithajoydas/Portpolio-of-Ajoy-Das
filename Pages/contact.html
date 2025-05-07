@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #f9f9f9;
+        color: #222;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .contact-container {
+        max-width: 600px;
+        margin: 2rem auto;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-info {
+        margin-bottom: 2rem;
+      }
+
+      .contact-info p {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+      }
+
+      .contact-form label {
+        display: block;
+        margin: 0.8rem 0 0.3rem;
+        font-weight: bold;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 0.6rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+
+      .contact-form textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .contact-form button {
+        margin-top: 1rem;
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        background-color: #000000;
+        color: white;
+        cursor: pointer;
+      }
+
+      .contact-form button:hover {
+        background-color: #929292;
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br />
+    <h1>Contact</h1>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <p><strong>Email:</strong> ajoy@example.com</p>
+        <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+        <p><strong>Location:</strong> Assam, India</p>
+      </div>
+
+      <div class="contact-form">
+        <form id="contact-form1" action="https://formspree.io/f/xrbqkbvk" method="post">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your full name"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("contact-form1")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData.entries());
+
+          const response = await fetch("", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
+
+          if (response.ok) {
+            alert("Message sent successfully!");
+          } else {
+            alert("Failed to send message.");
+          }
+        });
+    </script>
+  </body>
+</html>
