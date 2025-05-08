@@ -11,6 +11,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        user-select: none;
       }
 
       body {
@@ -31,6 +32,8 @@
         list-style: none;
         display: flex;
         gap: 20px;
+        user-select: none;
+        align-items: center;
       }
 
       nav a {
@@ -108,10 +111,18 @@
           transform: translateY(0);
         }
       }
-  </style>
+      #installBtn {
+        padding: 12px 16px;
+        background-color: #0a0a0a;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+    </style>
   </head>
   <body>
-    
     <span class="span1">☰ Menu</span>
     <nav>
       <ul>
@@ -120,24 +131,46 @@
         <li><a href="#/skills" data-link>Skills</a></li>
         <li><a href="#/education" data-link>Education</a></li>
         <li><a href="#/contact" data-link>Contact</a></li>
+        <button id="installBtn" style="display: none">Install App</button>
       </ul>
     </nav>
 
     <main id="app" class="fade-in"></main>
     <script>
-      const menuBtn = document.querySelector('.span1');
-      const nav = document.querySelector('nav');
+      const menuBtn = document.querySelector(".span1");
+      const nav = document.querySelector("nav");
 
-      menuBtn.addEventListener('click', () => {
-        nav.classList.toggle('active');
+      menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
       });
-      document.querySelectorAll("li").forEach((a)=>{
-        a.addEventListener('click', () => {
-          nav.classList.remove('active');
-        })
-      })
+      document.querySelectorAll("li").forEach((a) => {
+        a.addEventListener("click", () => {
+          nav.classList.remove("active");
+        });
+      });
 
+      let deferredPrompt;
 
+      window.addEventListener("beforeinstallprompt", (e) => {
+        // Prevent the default mini-infobar from appearing
+        e.preventDefault();
+        // Stash the event for later
+        deferredPrompt = e;
+        // Show your custom install button
+        document.getElementById("installBtn").style.display = "block";
+      });
+
+      document
+        .getElementById("installBtn")
+        .addEventListener("click", async () => {
+          if (deferredPrompt) {
+            deferredPrompt.prompt(); // Show the prompt
+            const { outcome } = await deferredPrompt.userChoice;
+            console.log(`User response to the install prompt: ${outcome}`);
+            deferredPrompt = null; // Clear the saved prompt
+            document.getElementById("installBtn").style.display = "none";
+          }
+        });
     </script>
     <script src="router.js"></script>
   </body>
