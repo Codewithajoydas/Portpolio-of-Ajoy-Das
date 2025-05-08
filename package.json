@@ -1,0 +1,23 @@
+{
+  "name": "javascript-projects",
+  "version": "1.0.0",
+  "description": "![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)\r ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)\r ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)",
+  "homepage": "https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS#readme",
+  "bugs": {
+    "url": "https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS.git"
+  },
+  "license": "ISC",
+  "author": "Ajoy Das",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "typed.js": "^2.1.0"
+  }
+}

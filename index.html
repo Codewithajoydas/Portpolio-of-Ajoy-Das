@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio of Ajoy Das</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="manifest" href="manifest.json" />
     <style>
       * {
@@ -19,9 +20,10 @@
 
       nav {
         padding: 20px;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 20px;
+        z-index: 1000;
         transition: all 0.3s ease;
       }
 
@@ -106,9 +108,10 @@
           transform: translateY(0);
         }
       }
-    </style>
+  </style>
   </head>
   <body>
+    
     <span class="span1">☰ Menu</span>
     <nav>
       <ul>
@@ -121,7 +124,6 @@
     </nav>
 
     <main id="app" class="fade-in"></main>
-
     <script>
       const menuBtn = document.querySelector('.span1');
       const nav = document.querySelector('nav');
@@ -134,6 +136,8 @@
           nav.classList.remove('active');
         })
       })
+
+
     </script>
     <script src="router.js"></script>
   </body>

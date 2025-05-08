@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Document</title>
     <style>
       * {
@@ -18,7 +19,6 @@
         margin: 0;
       }
 
-     
       main {
         display: flex;
         justify-content: space-between;
@@ -97,6 +97,10 @@
           display: block;
           padding: 0 !important;
         }
+        #hero-title{
+          text-overflow: ellipsis;
+          font-size: 30px;
+        }
         .buttons {
           justify-content: center;
           flex-wrap: wrap;
@@ -123,17 +127,27 @@
           margin-top: 100px;
         }
       }
+      #main canvas {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        z-index: -1 !important;
+      }
     </style>
   </head>
   <body>
-    <main>
-      <img src="./screenshots/Ajoy.png" alt="Photo of Ajoy Das" style="display: none;" id="one" />
+    <main id="main">
+      <img
+        src="./screenshots/Ajoy.png"
+        alt="Photo of Ajoy Das"
+        style="display: none"
+        id="one"
+      />
       <div class="content">
-        <h1>
-          Hi 👋,<br />
+        <h1 style="text-wrap: nowrap;" id="hero-title">
+         <span>Hi 👋,</span> <br />
           I'm Ajoy,<br />
-          A fullstack <span style="color: rgb(255, 140, 0)">Web</span> &
-          <span style="color: chartreuse">App</span> Developer
+          A fullstack <span id="text" style="color: rgb(218, 241, 3); border-bottom:1px solid black ;"></span>  Dev.
         </h1>
         <p>
           I am a passionate and dedicated software engineer who has been
@@ -161,5 +175,6 @@
         <img src="./screenshots/Ajoy.png" alt="Photo of Ajoy Das" id="two" />
       </div>
     </main>
+    <script src="../ani.js"></script>
   </body>
 </html>
