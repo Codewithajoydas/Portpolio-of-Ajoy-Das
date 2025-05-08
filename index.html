@@ -6,6 +6,7 @@
     <title>Portfolio of Ajoy Das</title>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" href="icons/icon-512.png" type="image/x-icon" />
     <style>
       * {
         margin: 0;
@@ -26,6 +27,9 @@
         right: 20px;
         z-index: 1000;
         transition: all 0.3s ease;
+        width: calc(100% - 20px);
+        display: flex;
+        justify-content: space-between;
       }
 
       nav ul {
@@ -125,6 +129,7 @@
   <body>
     <span class="span1">☰ Menu</span>
     <nav>
+      <div id="logo">Logo</div>
       <ul>
         <li><a href="#/landing" data-link>Home</a></li>
         <li><a href="#/about" data-link>About</a></li>
@@ -136,6 +141,8 @@
     </nav>
 
     <main id="app" class="fade-in"></main>
+
+    <!-- <div id="cursor"></div> -->
     <script>
       const menuBtn = document.querySelector(".span1");
       const nav = document.querySelector("nav");
@@ -172,9 +179,18 @@
           }
         });
 
-
-
-       
+      // let cursor = document.getElementById("cursor");
+      // cursor.style.width = "30px"
+      // cursor.style.height = "30px"
+      // cursor.style.backgroundColor = "rgba(0, 0, 255, 0.1)"
+      // cursor.style.boxShadow = "10px 40px 200px 300px rgba(0, 0, 255, 0.1)"
+      // cursor.style.position = "fixed"
+      // cursor.style.zIndex = "-10"
+      // cursor.style.borderRadius = "10000px"
+      // document.addEventListener("mousemove", (e) => {
+      //   cursor.style.left = `${e.clientX - cursor.offsetWidth / 2}px`;
+      //   cursor.style.top = `${e.clientY - cursor.offsetHeight / 2}px`;
+      // });
     </script>
     <script src="router.js"></script>
   </body>
