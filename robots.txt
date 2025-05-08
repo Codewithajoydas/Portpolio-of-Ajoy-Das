@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /node_modules
+
+Allow: /
+
+Sitemap: https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/sitemap.xml
