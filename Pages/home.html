@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <title>Document</title>
     <style>
       * {
@@ -97,7 +97,7 @@
           display: block;
           padding: 0 !important;
         }
-        #hero-title{
+        #hero-title {
           text-overflow: ellipsis;
           font-size: 30px;
         }
@@ -133,6 +133,29 @@
         left: 0;
         z-index: -1 !important;
       }
+      #popup{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.747);
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+        display: none;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        cursor: pointer;
+        width: 500px;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(4px);
+        overflow: hidden !important;
+      }
     </style>
   </head>
   <body>
@@ -144,10 +167,15 @@
         id="one"
       />
       <div class="content">
-        <h1 style="text-wrap: nowrap;" id="hero-title">
-         <span>Hi 👋,</span> <br />
+        <h1 style="text-wrap: nowrap" id="hero-title">
+          <span>Hi 👋,</span> <br />
           I'm Ajoy,<br />
-          A fullstack <span id="text" style="color: rgb(218, 241, 3); border-bottom:1px solid black ;"></span>  Dev.
+          A fullstack
+          <span
+            id="text"
+            style="color: rgb(218, 241, 3); border-bottom: 1px solid black"
+          ></span>
+          Dev.
         </h1>
         <p>
           I am a passionate and dedicated software engineer who has been
@@ -175,6 +203,16 @@
         <img src="./screenshots/Ajoy.png" alt="Photo of Ajoy Das" id="two" />
       </div>
     </main>
+<div id="popup">
+  <h3>Do you want to download this image?</h3>
+  <p>Please confirm your action below.</p>
+  <div class="buttons">
+    <button class="btn" id="yesBtn">Download</button>
+    <button class="btn1" id="noBtn">Cancel</button>
+  </div>
+</div>
+
+
     <script src="./ani.js"></script>
   </body>
 </html>
