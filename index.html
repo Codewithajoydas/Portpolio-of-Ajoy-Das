@@ -29,10 +29,7 @@
       property="og:description"
       content="Explore interactive JavaScript projects like Todo List, Clock, and more."
     />
-    <meta
-      property="og:image"
-      content="../screenshots/31.png"
-    />
+    <meta property="og:image" content="../screenshots/31.png" />
     <meta
       property="og:url"
       content="https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/"
@@ -102,12 +99,21 @@
         display: none;
         position: absolute;
         top: 20px;
-        left: 20px;
+        right: 20px;
         font-weight: bold;
         cursor: pointer;
       }
 
       @media (max-width: 900px) {
+        #logo {
+          display: none !important;
+        }
+        header {
+          display: flex !important;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+        }
         nav {
           position: fixed;
           width: 0%;
@@ -174,9 +180,31 @@
     </style>
   </head>
   <body>
-    <span class="span1">☰ Menu</span>
+    <div>
+      <header style="display: none; align-items: center; gap: 10px">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="./icons/icon-512.png" alt="Logo" width="40px" />
+          <span
+            style="
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+                sans-serif;
+            "
+            >Ajoy Das.</span
+          >
+        </div>
+      </header>
+      <span class="span1">☰ Menu</span>
+    </div>
     <nav>
-      <div id="logo">Logo</div>
+      <div id="logo" style="display: flex; align-items: center; gap: 10px">
+        <img src="./icons/icon-512.png" alt="Logo" width="40px" /><span
+          style="
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+              sans-serif;
+          "
+          >Ajoy Das.</span
+        >
+      </div>
       <ul>
         <li><a href="#/landing" data-link>Home</a></li>
         <li><a href="#/about" data-link>About</a></li>
