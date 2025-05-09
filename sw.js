@@ -14,6 +14,11 @@ const urlsToCache = [
   `${BASE_PATH}offline.html`, // Create this offline fallback page
   `${BASE_PATH}icons/icon-192.png`,
   `${BASE_PATH}icons/icon-512.png`,
+  `${BASE_PATH}Pages/home.html`,
+  `${BASE_PATH}Pages/about.html`,
+  `${BASE_PATH}Pages/skills.html`,
+  `${BASE_PATH}Pages/education.html`,
+  `${BASE_PATH}Pages/contact.html`,
 ];
 
 // Install event
