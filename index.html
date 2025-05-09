@@ -186,7 +186,7 @@
   <body>
     <div>
       <header style="display: none; align-items: center; gap: 10px">
-        <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 10px">
           <img src="./icons/icon-512.png" alt="Logo" width="40px" />
           <span
             style="
@@ -223,6 +223,17 @@
 
     <!-- <div id="cursor"></div> -->
     <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/JAVASCRIPT-PROJECTS/sw.js")
+            .then((reg) => console.log("Service Worker registered", reg))
+            .catch((err) =>
+              console.error("Service Worker registration failed", err)
+            );
+        });
+      }
+
       const menuBtn = document.querySelector(".span1");
       const nav = document.querySelector("nav");
 
