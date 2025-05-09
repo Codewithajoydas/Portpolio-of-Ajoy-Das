@@ -2,6 +2,7 @@
   "name": "JAVASCRIPT-PROJECTS",
   "short_name": "javascriptprojects",
   "start_url": ".",
+  "description":"a collection of beginner-friendly JavaScript projects developed by Ajoy Das. Each project is designed to demonstrate specific JavaScript functionality and provide hands-on experience for new developers. It also integrates HTML and CSS for UI design and interaction",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
@@ -21,17 +22,20 @@
     {
       "src": "screenshots/first.png",
       "type": "image/png",
-      "sizes": "800x600"
+      "sizes": "800x600",
+      "form_factor": "wide"
     },
     {
       "src": "screenshots/second.png",
       "type": "image/png",
-      "sizes": "800x600"
+      "sizes": "800x600",
+      "form_factor": "wide"
     },
     {
       "src": "screenshots/third.png",
       "type": "image/png",
-      "sizes": "800x600"
+      "sizes": "800x600",
+      "form_factor": "wide"
     }
   ]
 }
