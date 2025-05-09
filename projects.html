@@ -47,6 +47,10 @@
     />
     <!-- <base href="/JAVASCRIPT-PROJECTS/" /> -->
     <!-- <base href="/JAVASCRIPT-PROJECTS/" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css"
+    />
     <meta
       name="keywords"
       content="JavaScript, projects, web development, coding, tutorials"
@@ -261,6 +265,20 @@
     <div class="container">
       <div style="height: 100vh; transition: all 1s">
         <div class="sidebar">
+          <button
+            style="
+              width: 250px;
+              background: none;
+              border: none;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              cursor: pointer;
+              padding-bottom: 10px;
+              white-space: unset;
+            "
+         onclick="window.location.href = `/`"
+          >
+            <i class="bi bi-arrow-left" style="display: block !important;"> Go Back To Home</i> 
+          </button>
           <span
             style="
               display: flex;
@@ -480,7 +498,12 @@
           ></span>
         </header>
         <!-- Place this tag where you want the button to render. -->
-        <iframe src="./01-palindrome-checker/index.html" name="projectFrame">
+
+        <iframe
+          src="./01-palindrome-checker/index.html"
+          name="projectFrame"
+          title=""
+        >
           Loading....
         </iframe>
         <button
