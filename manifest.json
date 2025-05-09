@@ -21,17 +21,17 @@
     {
       "src": "screenshots/first.png",
       "type": "image/png",
-      "sizes": "600x800"
+      "sizes": "800x600"
     },
     {
       "src": "screenshots/second.png",
       "type": "image/png",
-      "sizes": "600x800"
+      "sizes": "800x600"
     },
     {
       "src": "screenshots/third.png",
       "type": "image/png",
-      "sizes": "600x800"
+      "sizes": "800x600"
     }
   ]
 }
