@@ -19,7 +19,7 @@ const urlsToCache = [
 // Install event
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    CacheStorage.open(CACHE_NAME).then((cache) => {
+    caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(urlsToCache);
     })
   );
