@@ -14,9 +14,11 @@ body{
     justify-content: center;
     align-items: center;
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-    font-size: 25vh;
+    /* font-size: 25vh; */
+    /* font: 1em sans-serif; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bolder;
+    font-size: 10em;
 }
 p{
      filter:drop-shadow(10px 1px 5px #1a1a1a);
@@ -24,4 +26,12 @@ p{
 }
 ::-webkit-scrollbar{
       display: none;
+    }
+
+
+    @media screen and (max-width: 600px) {
+        .clock{
+            font-size: 5em;
+        }
+        
     }

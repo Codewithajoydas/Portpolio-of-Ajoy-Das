@@ -12,73 +12,80 @@
       }
 
       body {
-        font-family: Arial, sans-serif;
-        /* background: linear-gradient(to right, #f72585, #f72585); */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: #333;
         display: flex;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        background: #f5f5f5;
+        overflow: hidden;
       }
 
       .about-container {
         background: #fff;
-        /* display: flex; */
+        display: flex;
         height: 400px;
         max-width: 900px;
         width: 100%;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
-        overflow: scroll;
+        overflow: hidden;
         position: relative;
         text-align: center;
       }
 
       .image-section {
-        /* background: #f72585; */
         flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: fixed;
         width: 300px;
         height: 400px;
+        position: relative;
       }
 
       .image-section img {
         width: 100%;
-        height: auto;
-        cursor: pointer;
         height: 100%;
-        transition: all 0.3s ease-in-out;
-        position: relative;
-        border-radius: 10px;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 10px 0 0 10px;
         filter: grayscale(100%) contrast(1.2);
+        transition: all 0.3s ease-in-out;
       }
+
       .image-section img:hover {
         filter: grayscale(0);
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
+
       .content-section {
         flex: 2;
         padding: 40px;
-        margin-left: 300px;
+        text-align: left;
       }
 
       .content-section h1 {
         font-size: 32px;
         margin-bottom: 10px;
+        text-align: center;
       }
 
       .content-section h3 {
         color: #f72585;
         margin-bottom: 20px;
+        text-align: center;
       }
 
       .content-section p {
         line-height: 1.6;
         margin-bottom: 20px;
+      }
+
+      .social-icons {
+        margin-top: 20px;
+        text-align: center;
       }
 
       .social-icons a {
@@ -91,36 +98,52 @@
       .social-icons a:hover {
         color: #f72585;
       }
-    @media screen and (max-width: 900px) {
-  .about-container {
-    flex-direction: column;
-    height: auto;
-  }
-  .image-section {
-    width: 100%;
-    height: auto;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    position: relative;
-  }
-  .image-section img{
-    width: 50%;
-  }
-  body{
-    display: block;
-  }
-  .content-section {
-    margin-left: 0;
-    padding: 20px;
-  }
-}
 
+      /* Responsive */
+      @media screen and (max-width: 900px) {
+        .about-container {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .image-section {
+          width: 100%;
+          height: auto;
+          margin-bottom: 20px;
+        }
+
+        .image-section img {
+          width: 60%;
+          height: auto;
+          border-radius: 10px;
+        }
+
+        .content-section {
+          margin-left: 0;
+          padding: 20px;
+        }
+
+        body {
+          display: block;
+          overflow: auto;
+        }
+      }
+
+      /* Loader styles */
+    
     </style>
   </head>
   <body>
+    
+
+    <!-- Main Content -->
     <div class="about-container">
       <div class="image-section">
-       <img src='https://i.postimg.cc/kgNSt7r7/me.png' border='0' alt='me'/>
+        <img
+          src="https://i.postimg.cc/kgNSt7r7/me.png"
+          alt="me"
+          loading="lazy"
+        />
       </div>
       <div class="content-section">
         <h1>ABOUT ME</h1>
@@ -143,47 +166,25 @@
           systems to enhance user experience.
         </p>
 
-        <ul style="text-align: left; line-height: 2;">
-          <li>
-            <strong>Education:</strong> B.Sc in Software Engineering (Expected
-            2026)
-          </li>
+        <ul style="line-height: 2">
+          <li><strong>Education:</strong> B.Sc in Software Engineering (Expected 2026)</li>
           <li><strong>Location:</strong> India</li>
-          <li>
-            <strong>Experience:</strong> 2+ years in full-stack web development
-          </li>
-          <li>
-            <strong>Current Focus:</strong> Building AI-based web tools and SaaS
-            apps
-          </li>
+          <li><strong>Experience:</strong> 2+ years in full-stack web development</li>
+          <li><strong>Current Focus:</strong> Building AI-based web tools and SaaS apps</li>
         </ul>
-        <br />
+
         <div class="social-icons">
-          <a href="https://yourportfolio.com" target="_blank" title="Website"
-            >🌐</a
-          >
-          <a
-            href="https://twitter.com/yourhandle"
-            target="_blank"
-            title="Twitter"
-            >🐦</a
-          >
-          <a
-            href="https://linkedin.com/in/yourprofile"
-            target="_blank"
-            title="LinkedIn"
-            >💼</a
-          >
+          <a href="https://yourportfolio.com" target="_blank" title="Website">🌐</a>
+          <a href="https://twitter.com/yourhandle" target="_blank" title="Twitter">🐦</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">💼</a>
           <a href="mailto:your.email@example.com" title="Email">📧</a>
-          <a
-            href="https://github.com/ajoydas-official"
-            target="_blank"
-            title="GitHub"
-            >🐙</a
-          >
+          <a href="https://github.com/ajoydas-official" target="_blank" title="GitHub">🐙</a>
         </div>
-        <br />
       </div>
     </div>
+
+    <script>
+     
+    </script>
   </body>
 </html>

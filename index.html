@@ -181,9 +181,43 @@
         cursor: pointer;
         z-index: 1000;
       }
+      .loading {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #aaa;
+        border-top: 5px solid #000;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
     </style>
   </head>
   <body>
+    <!-- Loading Spinner -->
+    <div class="loading">
+      <div class="spinner"></div>
+    </div>
     <div>
       <header style="display: none; align-items: center; gap: 10px">
         <div style="display: flex; align-items: center; gap: 10px">
@@ -281,6 +315,16 @@
       //   cursor.style.left = `${e.clientX - cursor.offsetWidth / 2}px`;
       //   cursor.style.top = `${e.clientY - cursor.offsetHeight / 2}px`;
       // });
+       // Loading screen control
+       document.addEventListener("DOMContentLoaded", function () {
+        const loading = document.querySelector(".loading");
+        const mainContent = document.querySelector(".about-container");
+
+        setTimeout(() => {
+          loading.style.display = "none";
+          mainContent.style.display = "flex";
+        }, 2000);
+      });
     </script>
     <script src="router.js"></script>
   </body>
