@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draggable List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="board">
+        <div class="column" id="todo">
+          <h2>To Do</h2>
+          <div class="task" draggable="true">Learn JavaScript</div>
+          <div class="task" draggable="true">Study CSS Grid</div>
+        </div>
+      
+        <div class="column" id="in-progress">
+          <h2>In Progress</h2>
+          <div class="task" draggable="true">Build Dashboard</div>
+        </div>
+      
+        <div class="column" id="done">
+          <h2>Done</h2>
+          <div class="task" draggable="true">HTML Basics</div>
+        </div>
+      </div>
+      
+
+    <script src="script.js"></script>
+  </body>
+</html>
