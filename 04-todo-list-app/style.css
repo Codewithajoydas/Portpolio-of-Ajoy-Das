@@ -16,6 +16,7 @@ input {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 5px;
   border: 1px solid #ccc;
+  background:none;
   box-shadow: 1px 1px 5px #f7f6f6;
 }
 button {
@@ -23,9 +24,11 @@ button {
   padding: 10px 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: none;
+  /* border: 1px solid #ccc; */
   box-shadow: 1px 1px 5px #f7f6f6;
   cursor: pointer;
+  background:rgb(72, 87, 219) ;
 }
 .delete-btn {
   color: #f50000;

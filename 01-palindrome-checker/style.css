@@ -11,6 +11,9 @@ body{
 input{
     outline: none;
     padding: 10px 20px;
+    background: none;
+    border: 1px solid #ccc;
+    color: gray;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 button{
