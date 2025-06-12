@@ -8,7 +8,10 @@
     <link rel="manifest" href="manifest.json" />
     <link rel="shortcut icon" href="icons/icon-512.png" type="image/x-icon" />
     <meta name="title" content="Portfolio of Ajoy Das" />
-    <meta name="google-site-verification" content="zI0psHcMlZ5K44WCOW4ydr1nfWEqlDMr83EnePJzVUo" />
+    <meta
+      name="google-site-verification"
+      content="zI0psHcMlZ5K44WCOW4ydr1nfWEqlDMr83EnePJzVUo"
+    />
     <meta
       name="description"
       content="A personal JavaScript portfolio showcasing responsive, interactive projects . Explore apps like Todo List, Clock and more."
@@ -55,22 +58,27 @@
       name="twitter:image"
       content="https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/assets/preview.jpg"
     />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8386909400947159"
-    crossorigin="anonymous"></script>
-<!-- Place this at the very top inside <head> -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
-  
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8386909400947159"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Place this at the very top inside <head> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         user-select: none;
-        font-family: 'Quicksand', sans-serif !important; 
-
+        font-family: "Quicksand", sans-serif !important;
       }
 
       body {
@@ -163,11 +171,18 @@
           z-index: 9999;
         }
       }
-
       ::-webkit-scrollbar {
-        display: none;
+        width: 3px !important;
+        background: transparent;
       }
-
+      ::-webkit-scrollbar-thumb{
+        background: linear-gradient(180deg, transparent,rgb(0, 0, 0));
+        border-radius: 100px;
+        width: 3px !important;
+      }
+      ::-webkit-scrollbar-track{
+        background: transparent !important;
+      }
       .fade-in {
         animation: fadeIn 0.5s ease-in-out;
       }
@@ -269,7 +284,7 @@
 
     <main id="app" class="fade-in"></main>
 
-    <!-- <div id="cursor"></div> -->
+    <div id="cursor"></div>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
@@ -317,20 +332,20 @@
           }
         });
 
-      // let cursor = document.getElementById("cursor");
-      // cursor.style.width = "30px"
-      // cursor.style.height = "30px"
-      // cursor.style.backgroundColor = "rgba(0, 0, 255, 0.1)"
-      // cursor.style.boxShadow = "10px 40px 200px 300px rgba(0, 0, 255, 0.1)"
-      // cursor.style.position = "fixed"
-      // cursor.style.zIndex = "-10"
-      // cursor.style.borderRadius = "10000px"
-      // document.addEventListener("mousemove", (e) => {
-      //   cursor.style.left = `${e.clientX - cursor.offsetWidth / 2}px`;
-      //   cursor.style.top = `${e.clientY - cursor.offsetHeight / 2}px`;
-      // });
-       // Loading screen control
-       document.addEventListener("DOMContentLoaded", function () {
+      let cursor = document.getElementById("cursor");
+      cursor.style.width = "10px";
+      cursor.style.height = "10px";
+      cursor.style.backgroundColor = "rgba(0, 0, 255, 0.1)";
+      cursor.style.boxShadow = "10px 40px 100px 100px rgba(0, 0, 255, 0.1)";
+      cursor.style.position = "fixed";
+      cursor.style.zIndex = "-10";
+      cursor.style.borderRadius = "10000px";
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = `${e.clientX - cursor.offsetWidth / 2}px`;
+        cursor.style.top = `${e.clientY - cursor.offsetHeight / 2}px`;
+      });
+      // Loading screen control
+      document.addEventListener("DOMContentLoaded", function () {
         const loading = document.querySelector(".loading");
         const mainContent = document.querySelector(".about-container");
 
