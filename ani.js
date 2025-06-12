@@ -1,5 +1,5 @@
 new Typed("#text", {
-  strings: ["Website", "Application"],
+  strings: ["Web", "App"],
   typeSpeed: 100,
   backSpeed: 100,
   fadeOut: true,

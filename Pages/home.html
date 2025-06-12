@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap");
+    </style>
     <title>Document</title>
     <style>
       * {
@@ -12,11 +14,14 @@
         box-sizing: border-box;
       }
       body {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        /* background-color: #1f1f1f; */
-        /* color: #fff; */
         overflow-y: hidden;
         margin: 0;
+        font-family: "Quicksand", sans-serif;
+        background: linear-gradient(
+          40deg,
+          rgba(173, 243, 8, 0.581),
+          transparent 50%
+        );
       }
 
       main {
@@ -64,20 +69,24 @@
       }
 
       .btn1 {
-        background-color: #f2f2f2;
+        background-color: transparent;
         color: #000;
         border: 1px solid #000;
       }
 
       .btn:hover {
-        background-color: #ffffff;
+        background-color: transparent;
         border: 1px solid black;
         color: black;
+        transform: scale(1.1) skewY(5deg);
+        box-shadow: 10px 10px 1px black;
+        backdrop-filter: blur(10px);
       }
 
       .btn1:hover {
         background-color: #000000;
         color: white;
+        transform: scale(1.1) skewY(-5deg);
       }
 
       .image-wrapper img {
@@ -91,9 +100,8 @@
       }
 
       @media screen and (max-width: 900px) {
-        body{
-        overflow-y: auto;
-
+        body {
+          overflow-y: auto;
         }
         main {
           flex-direction: column;
@@ -137,7 +145,7 @@
         left: 0;
         z-index: -1 !important;
       }
-      #popup{
+      #popup {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -162,80 +170,92 @@
       }
 
       @keyframes cube {
-    from {
+        from {
+          transform: scale(0) rotate(0deg) translate(-50%, -50%);
+          opacity: 1;
+        }
+        to {
+          transform: scale(20) rotate(960deg) translate(-50%, -50%);
+          opacity: 0;
+        }
+      }
+
+      .background {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        z-index: -1;
+      }
+      .background li {
+        position: absolute;
+        top: 80vh;
+        left: 45vw;
+        width: 10px;
+        height: 10px;
+        border: solid 1px #47474749;
+        box-shadow: 1px 1px 200px rgba(88, 88, 88, 0.9);
+        color: transparent;
+        transform-origin: top left;
         transform: scale(0) rotate(0deg) translate(-50%, -50%);
-        opacity: 1;
-    }
-    to {
-        transform: scale(20) rotate(960deg) translate(-50%, -50%);
-        opacity: 0;
-    }
-}
+        animation: cube 9s ease-in forwards infinite;
+      }
+      .background li:nth-child(0) {
+        animation-delay: 0s;
+        left: 33vw;
+        top: 29vh;
+        background: #000;
+      }
 
-.background {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    z-index: -1;
-}
-.background li {
-    position: absolute;
-    top: 80vh;
-    left: 45vw;
-    width: 10px;
-    height: 10px;
-    border: solid 1px #47474749;
-    box-shadow: 1px 1px 200px rgba(88, 88, 88, 0.9);
-    color: transparent;
-    transform-origin: top left;
-    transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    animation: cube 9s ease-in forwards infinite;
-}
-.background li:nth-child(0) {
-    animation-delay: 0s;
-    left: 33vw;
-    top: 29vh;
-    background: #000;
-}
+      .background li:nth-child(1) {
+        animation-delay: 2s;
+        left: 80vw;
+        top: 89vh;
+        border-color: #ffffff;
+      }
 
-.background li:nth-child(1) {
-    animation-delay: 2s;
-    left: 80vw;
-    top: 89vh;
-    border-color: #ffffff;
-}
+      .background li:nth-child(2) {
+        animation-delay: 4s;
+        left: 56vw;
+        top: 41vh;
+      }
 
-.background li:nth-child(2) {
-    animation-delay: 4s;
-    left: 56vw;
-    top: 41vh;
-}
+      .background li:nth-child(3) {
+        animation-delay: 6s;
+        left: 10vw;
+        top: 11vh;
+        border-color: #ffffff;
+      }
 
-.background li:nth-child(3) {
-    animation-delay: 6s;
-    left: 10vw;
-    top: 11vh;
-    border-color: #ffffff;
-}
+      .background li:nth-child(4) {
+        animation-delay: 8s;
+        left: 96vw;
+        top: 59vh;
+        border-color: #ffffff;
+      }
 
-.background li:nth-child(4) {
-    animation-delay: 8s;
-    left: 96vw;
-    top: 59vh;
-    border-color: #ffffff;
-}
-
-.background li:nth-child(5) {
-    animation-delay: 10s;
-    left: 29vw;
-    top: 73vh;
-}
-
+      .background li:nth-child(5) {
+        animation-delay: 10s;
+        left: 29vw;
+        top: 73vh;
+      }
+      #text {
+        /* font-size: 60px; */
+        font-weight: bolder;
+        background: url("https://media.cnn.com/api/v1/images/stellar/prod/200130142829-02-famous-new-york-buildings.jpg?q=w_1110,c_fill")
+          center/cover no-repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        background-blend-mode: multiply;
+        filter: brightness(0.9);
+        transform: scale(1.4);
+      }
     </style>
   </head>
   <body>
@@ -247,16 +267,27 @@
         id="one"
       />
       <div class="content">
-        <h1 style="text-wrap: nowrap" id="hero-title">
+        <h2 style="text-wrap: nowrap; margin-bottom: 20px" id="hero-title">
           <span>Hi 👋,</span> <br />
           I'm Ajoy,<br />
+        </h2>
+        <h1
+          style="
+            font-family: Georgia, 'Times New Roman', Times, serif !important;
+            color: rgba(173, 243, 8, 0.9);
+            line-height: normal;
+          "
+        >
           A fullstack
           <span
             id="text"
-            style="color: rgb(218, 241, 3); border-bottom: 1px solid black"
+            style="
+              font-family: Georgia, 'Times New Roman', Times, serif !important;
+            "
           ></span>
           Dev.
         </h1>
+        <h6>2026 July 20th</h6>
         <p>
           I am a passionate and dedicated software engineer who has been
           building websites and applications since 2020. With a strong eye for
@@ -270,8 +301,7 @@
           <a href="mailto:codewithajoydas@gmail.com"
             ><button class="btn1">HIRE ME</button></a
           >
-          <a
-            href="https://codewithajoydas.live/projects.html"
+          <a href="https://codewithajoydas.live/projects.html"
             ><button class="btn">SEE MY PROJECTS</button></a
           >
         </div>
@@ -283,22 +313,22 @@
         <img src="./screenshots/Ajoy.png" alt="Photo of Ajoy Das" id="two" />
       </div>
     </main>
-<div id="popup">
-  <h3>Do you want to download this image?</h3>
-  <p>Please confirm your action below.</p>
-  <div class="buttons">
-    <button class="btn" id="yesBtn">Download</button>
-    <button class="btn1" id="noBtn">Cancel</button>
-  </div>
-</div>
-<ul class="background">
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
+    <div id="popup">
+      <h3>Do you want to download this image?</h3>
+      <p>Please confirm your action below.</p>
+      <div class="buttons">
+        <button class="btn" id="yesBtn">Download</button>
+        <button class="btn1" id="noBtn">Cancel</button>
+      </div>
+    </div>
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
 
     <script src="./ani.js"></script>
   </body>

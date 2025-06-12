@@ -57,12 +57,20 @@
     />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8386909400947159"
     crossorigin="anonymous"></script>
+<!-- Place this at the very top inside <head> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         user-select: none;
+        font-family: 'Quicksand', sans-serif !important; 
+
       }
 
       body {
@@ -189,11 +197,14 @@
         position: fixed;
         top: 0;
         left: 0;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.5);
         z-index: 9999;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        backdrop-filter: blur(30px);
       }
 
       .spinner {
@@ -219,6 +230,7 @@
     <!-- Loading Spinner -->
     <div class="loading">
       <div class="spinner"></div>
+      <p>Page is Loding...</p>
     </div>
     <div>
       <header style="display: none; align-items: center; gap: 10px">
@@ -327,6 +339,8 @@
           mainContent.style.display = "flex";
         }, 2000);
       });
+
+      (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     <script src="router.js"></script>
   </body>
