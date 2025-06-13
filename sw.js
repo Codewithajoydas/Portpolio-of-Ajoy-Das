@@ -1,24 +1,18 @@
-const CACHE_NAME = "js-projects-cache-v1";
+const CACHE_NAME = "js-projects-cache-v2";
 
-// Detect base path (GitHub Pages vs localhost)
-const BASE_PATH = self.location.pathname.includes("/JAVASCRIPT-PROJECTS/")
-  ? "/JAVASCRIPT-PROJECTS/"
-  : "/";
-
-// Files to cache
 const urlsToCache = [
-  `${BASE_PATH}`,
-  `${BASE_PATH}projects.html`,
-  `${BASE_PATH}index.html`,
-  `${BASE_PATH}manifest.json`,
-  `${BASE_PATH}offline.html`, // Create this offline fallback page
-  `${BASE_PATH}icons/icon-192.png`,
-  `${BASE_PATH}icons/icon-512.png`,
-  `${BASE_PATH}Pages/home.html`,
-  `${BASE_PATH}Pages/about.html`,
-  `${BASE_PATH}Pages/skills.html`,
-  `${BASE_PATH}Pages/education.html`,
-  `${BASE_PATH}Pages/contact.html`,
+  "/",
+  "/index.html",
+  "/projects.html",
+  "/manifest.json",
+  "/offline.html",
+  "/icons/icon-192.png",
+  "/icons/icon-512.png",
+  "/Pages/home.html",
+  "/Pages/about.html",
+  "/Pages/skills.html",
+  "/Pages/education.html",
+  "/Pages/contact.html",
 ];
 
 // Install event
@@ -52,9 +46,8 @@ self.addEventListener("fetch", (event) => {
       return (
         cachedResponse ||
         fetch(event.request).catch(() => {
-          // Show offline page for failed navigation
           if (event.request.mode === "navigate") {
-            return caches.match(`${BASE_PATH}offline.html`);
+            return caches.match("/offline.html");
           }
         })
       );
