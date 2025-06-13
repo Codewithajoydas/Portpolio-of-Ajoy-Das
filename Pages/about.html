@@ -71,14 +71,18 @@
       .content-section {
         flex: 2;
         margin-left: 300px;
-        padding: 40px;  
+        padding: 40px;
         text-align: left;
       }
 
       .content-section h1 {
-        font-size: 32px;
         margin-bottom: 10px;
         text-align: center;
+        font-size: clamp(50px, 8vw, 100px);
+        color: rgb(43, 43, 43);
+        letter-spacing: 10px;
+        font-weight: bolder;
+        font-family: "Times New Roman", Times, serif !important;
       }
 
       .content-section h3 {
@@ -100,22 +104,22 @@
         gap: 30px;
         transition: all 1s;
       }
-      .social-icons a svg{
+      .social-icons a svg {
         width: 30px;
-        height:30px;
+        height: 30px;
       }
-      .social-icons a:nth-child(1):hover svg{
-        fill:rgb(52, 52, 52) ;
+      .social-icons a:nth-child(1):hover svg {
+        fill: rgb(52, 52, 52);
       }
-      
-      .social-icons a:nth-child(2):hover svg{
-        fill:#FF0069 ;
+
+      .social-icons a:nth-child(2):hover svg {
+        fill: #ff0069;
       }
-      .social-icons a:nth-child(3):hover svg{
-        fill:#FF4500 ;
+      .social-icons a:nth-child(3):hover svg {
+        fill: #ff4500;
       }
-      .social-icons a:nth-child(4):hover svg{
-        fill:#EA4335 ;
+      .social-icons a:nth-child(4):hover svg {
+        fill: #ea4335;
       }
       .social-icons a {
         text-decoration: none;
@@ -131,9 +135,9 @@
         z-index: 1000;
       }
       .social-icons a:hover {
-        box-shadow:inset 4px 4px 10px rgba(0, 0, 0, 0.187), 4px 4px 10px rgb(255, 255, 255);
+        box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.187),
+          4px 4px 10px rgb(255, 255, 255);
       }
-
 
       /* Responsive */
       @media screen and (max-width: 900px) {
@@ -141,7 +145,7 @@
           flex-direction: column;
           height: auto;
           padding: 0px 10px;
-          li{
+          li {
             list-style: none;
           }
         }
@@ -155,7 +159,7 @@
           aspect-ratio: 9/4;
           object-fit: cover;
         }
-        
+
         .image-section img {
           z-index: 0 !important;
           object-fit: cover;

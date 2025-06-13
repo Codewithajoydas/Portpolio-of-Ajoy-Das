@@ -102,9 +102,8 @@
       @media screen and (max-width: 900px) {
         body {
           overflow-y: auto;
-          
         }
-        .content{
+        .content {
           margin-top: 30px !important;
         }
         main {
@@ -140,7 +139,7 @@
           opacity: 0.8;
         }
         .content {
-          padding:0 15px !important;
+          padding: 0 15px !important;
         }
       }
       #main canvas {
@@ -260,6 +259,41 @@
         filter: brightness(0.9);
         transform: scale(1.4);
       }
+      h1 {
+        text-align: center;
+        font-size: clamp(50px, 6vw, 100px) !important;
+        color: rgb(43, 43, 43);
+        letter-spacing: 10px;
+        font-weight: bolder;
+        font-family: "Times New Roman", Times, serif !important;
+        white-space: nowrap;
+        text-transform: capitalize;
+      }
+      .hand {
+        transform-origin: bottom center;
+        animation: wave 2s ease-in-out infinite;
+        display: inline-block;
+        font-size: xx-large;
+      }
+
+      /* Waving animation */
+      @keyframes wave {
+        0% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(40deg);
+        }
+        50% {
+          transform: rotate(0deg);
+        }
+        75% {
+          transform: rotate(40deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
     </style>
   </head>
   <body>
@@ -270,25 +304,25 @@
         style="display: none"
         id="one"
       />
-      <div class="content" >
-        <h2 style="text-wrap: nowrap; margin-bottom: 20px" id="hero-title">
-          <span>Hi 👋,</span> <br />
+      <div class="content">
+        <h2
+          style="
+            text-wrap: nowrap;
+            font-family: 'Times New Roman', Times, serif !important;
+          "
+          id="hero-title"
+        >
+          Hi <span class="hand">👋</span><br />
           I'm Ajoy,<br />
         </h2>
-        <h1
-          style="
-            font-family: Georgia, 'Times New Roman', Times, serif !important;
-            color: rgba(173, 243, 8, 0.9);
-            line-height: normal;
-          "
-        >
+        <h1>
           A fullstack
-          <span
+          <!-- <span
             id="text"
             style="
               font-family: Georgia, 'Times New Roman', Times, serif !important;
             "
-          ></span>
+          ></span> -->
           Dev.
         </h1>
         <h6>2026 July 20th</h6>

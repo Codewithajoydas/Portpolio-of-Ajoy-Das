@@ -1,94 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Education</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 2rem;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      color: #222;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education</title>
+    <style>
+      body {
+        margin: 0;
+        color: #222;
+      }
 
-    h1 {
-      text-align: center;
-      color: #333;
-    }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
 
-    .education-section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+      .edu-container {
+        padding: 1rem 2rem;
+        border-radius: 12px;
+      }
 
-    .edu-item {
-      margin-bottom: 2rem;
-    }
+      .edu-card {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid white;
+        padding: 0 20px;
+        transition: all 0.6s ease-in-out;
+      }
 
-    .edu-item h3 {
-      margin: 0;
-      font-size: 1.3rem;
-      color: #444;
-    }
+      .edu-card h3 {
+        margin: 0;
+        font-size: 1.3rem;
+        color: #444;
+      }
 
-    .edu-item p {
-      margin: 0.3rem 0 0;
-      color: #555;
-    }
+      .edu-card p {
+        margin: 0.3rem 0 0;
+        color: #555;
+      }
 
-    .edu-item span {
-      font-weight: bold;
-      color: #222;
-    }
+      .edu-card span {
+        font-weight: bold;
+        color: #222;
+      }
 
-    .note {
-      font-style: italic;
-      margin-top: 1rem;
-      color: #777;
-    }
-  </style>
-</head>
-<body>
-    <br><br>
-  <h1>Education</h1>
-
-  <div class="education-section">
-    <div class="edu-item">
-      <h3>HSLC (High School Leaving Certificate)</h3>
-      <p><span>School:</span> Madhav Dev Bidya Niketan</p>
-      <p><span>Year of Completion:</span> 2018</p>
-      <p><span>Overview:</span> Built a solid academic foundation in core subjects. Developed an early interest in computers and problem-solving during this time.</p>
+      .edu-note {
+        font-style: italic;
+        margin-top: 1rem;
+        color: #777;
+      }
+      .hero {
+        margin-top: 60px;
+        text-align: center;
+        h1 {
+          font-size: clamp(50px, 8vw, 100px);
+          color: rgb(43, 43, 43);
+          letter-spacing: 10px;
+          font-weight: bolder;
+          font-family: "Times New Roman", Times, serif !important;
+        }
+      }
+      @media (max-width: 700px) {
+        .edu-card {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          gap: 20px;
+          border: 1px solid white;
+          img {
+            display: none;
+          }
+        }
+        .hero {
+          background: url("https://dev.epicgames.com/community/assets/images/static/getting_started/unreal_engine/step-2.png");
+          background-size: cover;
+          height: auto;
+          min-height: 250px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 0 30px !important;
+          border-radius: 10px;
+          box-shadow: inset 10px 10px 200px white;
+        }
+      }
+      .edu-card:hover {
+        img {
+          transform: scale(1.2);
+        }
+      }
+      img {
+          filter: drop-shadow(4px 4px 10px rgba(11, 11, 11, 0.402));
+          transition: all 0.6s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>Education</h1>
+      <p style="padding: 0 10px">
+        A journey shaped by academic foundations and self-driven learning in
+        modern web and mobile development.
+      </p>
     </div>
+    <div class="edu-container">
+      <div class="edu-card">
+        <div>
+          <img
+            src="https://png.pngtree.com/png-clipart/20240116/original/pngtree-three-dimensional-school-building-3d-campus-map-modeling-png-image_14123641.png"
+            width="300px"
+            alt=""
+          />
+        </div>
+        <div>
+          <h3>HSLC (High School Leaving Certificate)</h3>
+          <p><span>School:</span> Madhav Dev Bidya Niketan</p>
+          <p><span>Year of Completion:</span> 2018</p>
+          <p>
+            <span>Overview:</span> Built a solid academic foundation in core
+            subjects. Developed an early interest in computers and
+            problem-solving during this time.
+          </p>
+        </div>
+      </div>
 
-    <div class="edu-item">
-      <h3>Higher Secondary (Science Stream)</h3>
-      <p><span>College:</span> Swami Vivekananda College</p>
-      <p><span>Year of Completion:</span> 2020</p>
-      <p><span>Overview:</span> Focused on Physics, Chemistry, and Mathematics. Started learning programming and web development independently during these years.</p>
+      <div class="edu-card">
+        <div>
+          <h3>Higher Secondary (Science Stream)</h3>
+          <p><span>College:</span> Swami Vivekananda College</p>
+          <p><span>Year of Completion:</span> 2020</p>
+          <p>
+            <span>Overview:</span> Focused on Physics, Chemistry, and
+            Mathematics. Started learning programming and web development
+            independently during these years.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://cdn3d.iconscout.com/3d/premium/thumb/school-building-3d-icon-download-in-png-blend-fbx-gltf-file-formats--college-education-campus-pack-buildings-icons-9063464.png"
+            width="300px"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div>
+          <img
+            src="https://cdn3d.iconscout.com/3d/premium/thumb/computer-science-3d-icon-download-in-png-blend-fbx-gltf-file-formats--analytics-logo-information-technology-engineering-pack-icons-7520470.png"
+            width="300px"
+            alt=""
+          />
+        </div>
+        <div>
+          <h3>Bachelor of Science (B.Sc) in Computer Science</h3>
+          <p><span>University:</span> Amity University</p>
+          <p><span>Status:</span> Currently Pursuing</p>
+          <p>
+            <span>Focus Areas:</span> Data Structures, Algorithms, Software
+            Development, Operating Systems, and Artificial Intelligence.
+          </p>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div>
+          <h3>Online Certifications & Continuous Learning</h3>
+          <p>
+            <span>Platforms:</span> Udemy, W3Schools, freeCodeCamp, and others
+          </p>
+          <p>
+            <span>Courses Taken:</span> Full Stack Web Development, JavaScript
+            Advanced Concepts, React, Node.js, Firebase, Git & GitHub
+          </p>
+          <p>
+            <span>Motivation:</span> I believe in lifelong learning and
+            regularly upgrade my skills through project-based learning and
+            real-world application.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://cdn3d.iconscout.com/3d/premium/thumb/graduation-hat-and-certificate-3d-icon-download-in-png-blend-fbx-gltf-file-formats--school-education-pack-icons-7980948.png"
+            width="300px"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <p class="edu-note">
+        “My educational journey reflects not just academic achievements, but a
+        deep curiosity and a self-driven passion to solve problems using
+        technology.”
+      </p>
     </div>
-
-    <div class="edu-item">
-      <h3>Bachelor of Science (B.Sc) in Computer Science</h3>
-      <p><span>University:</span> Amity University</p>
-      <p><span>Status:</span> Currently Pursuing</p>
-      <p><span>Focus Areas:</span> Data Structures, Algorithms, Software Development, Operating Systems, and Artificial Intelligence.</p>
-    </div>
-
-    <div class="edu-item">
-      <h3>Online Certifications & Continuous Learning</h3>
-      <p><span>Platforms:</span> Udemy, W3Schools, freeCodeCamp, and others</p>
-      <p><span>Courses Taken:</span> Full Stack Web Development, JavaScript Advanced Concepts, React, Node.js, Firebase, Git & GitHub</p>
-      <p><span>Motivation:</span> I believe in lifelong learning and regularly upgrade my skills through project-based learning and real-world application.</p>
-    </div>
-
-    <p class="note">
-      “My educational journey reflects not just academic achievements, but a deep curiosity and a self-driven passion to solve problems using technology.”
-    </p>
-  </div>
-</body>
+  </body>
 </html>
