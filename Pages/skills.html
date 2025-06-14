@@ -22,7 +22,7 @@
         align-items: center;
         flex-direction: column;
       }
-      svg {
+    li  svg {
         width: 80px;
         transition: all 0.5s ease-in-out;
       }
@@ -54,7 +54,7 @@
           transform: scale(1.1);
           box-shadow: 10px 10px 0px var(--hover-color),
              1px 1px 15px rgba(0, 0, 0, 0.229);
-          svg {
+         li svg {
             fill: var(--hover-color);
           }
         }
@@ -76,6 +76,9 @@
         .skills-section{
           margin: 10px 0;
         }
+      }
+      ::-webkit-scrollbar{
+        display: none;
       }
     </style>
   </head>

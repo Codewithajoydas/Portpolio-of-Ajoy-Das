@@ -100,8 +100,11 @@
         /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
       }
 
-      @media screen and (max-width: 900px) {
-        h1{
+      @media screen and (max-width: 700px) {
+        .share-btn{
+          display: none;
+        }
+        h1 {
           white-space: wrap !important;
         }
         body {
@@ -109,12 +112,21 @@
         }
         .content {
           margin-top: 30px !important;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
         }
         main {
           flex-direction: column;
           text-align: center;
           display: block;
           padding: 0 !important;
+          width: 100%;
+          img{
+            position: absolute;
+            right: 0;
+          }
         }
         #hero-title {
           text-overflow: ellipsis;
@@ -128,7 +140,7 @@
           max-width: 100%;
           position: relative;
           width: 100vw !important;
-          right: 0;
+          right: 0 !important;
           border-radius: 12px;
         }
         #two {
@@ -144,6 +156,7 @@
         }
         .content {
           padding: 0 15px !important;
+          z-index: 100000;
         }
       }
       #main canvas {
@@ -371,7 +384,8 @@
       <li></li>
       <li></li>
     </ul>
-
+    
+   
     <script src="./ani.js"></script>
   </body>
 </html>

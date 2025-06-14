@@ -102,7 +102,7 @@
       nav ul {
         list-style: none;
         display: flex;
-        gap: 20px;
+        gap: 40px !important;
         user-select: none;
         align-items: center;
       }
@@ -112,10 +112,16 @@
         color: #000;
         font-weight: bold;
         transition: color 0.3s;
+        &:hover {
+          border-bottom: 1px dotted #000;
+        }
       }
+      nav a.activ {
+        border-bottom: 1px dotted #000;
 
+      }
       nav a:hover {
-        color: chartreuse;
+        color: rgb(0, 0, 0);
       }
 
       .span1 {
@@ -176,12 +182,12 @@
         width: 3px !important;
         background: transparent;
       }
-      ::-webkit-scrollbar-thumb{
-        background: linear-gradient(180deg, transparent,rgb(0, 0, 0));
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, transparent, rgb(0, 0, 0));
         border-radius: 100px;
         width: 3px !important;
       }
-      ::-webkit-scrollbar-track{
+      ::-webkit-scrollbar-track {
         background: transparent !important;
       }
       .fade-in {
@@ -206,6 +212,10 @@
         border-radius: 8px;
         cursor: pointer;
         z-index: 1000;
+        transition: all 0.2s linear;
+        &:hover {
+          background: #0000009a;
+        }
       }
       .loading {
         width: 100vw;
@@ -240,6 +250,10 @@
           transform: rotate(360deg);
         }
       }
+      .share-btn {
+        border: none;
+        background: none;
+      }
     </style>
   </head>
   <body>
@@ -255,7 +269,8 @@
           <span
             style="
               font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
-                sans-serif;white-space: nowrap;
+                sans-serif;
+              white-space: nowrap;
             "
             >Ajoy Das.</span
           >
@@ -279,6 +294,26 @@
         <li><a href="#/skills" data-link>Skills</a></li>
         <li><a href="#/education" data-link>Education</a></li>
         <li><a href="#/contact" data-link>Contact</a></li>
+        <button class="share-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-share2-icon lucide-share-2"
+          >
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <line x1="8.59" x2="15.42" y1="13.51" y2="17.49" />
+            <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
+          </svg>
+        </button>
         <button id="installBtn" style="display: none">Install App</button>
       </ul>
     </nav>
@@ -300,6 +335,17 @@
 
       const menuBtn = document.querySelector(".span1");
       const nav = document.querySelector("nav");
+      const navLinks = document.querySelectorAll("nav a");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          navLinks.forEach((item) => item.classList.remove("activ"));
+
+          this.classList.add("activ");
+        });
+      });
 
       menuBtn.addEventListener("click", () => {
         nav.classList.toggle("active");
@@ -355,8 +401,20 @@
           mainContent.style.display = "flex";
         }, 2000);
       });
-
-      (adsbygoogle = window.adsbygoogle || []).push({});
+      document
+        .querySelector(".share-btn")
+        .addEventListener("click", async () => {
+          try {
+            await navigator.share({
+              title: "Codewithajoydas",
+              text: "Check out this amazing portfolio!",
+              url: "https://codewithajoydas.live/",
+            });
+          } catch (error) {
+            console.error("Somthing wrong", error);
+          }
+        })((adsbygoogle = window.adsbygoogle || []))
+        .push({});
     </script>
     <script src="router.js"></script>
   </body>
