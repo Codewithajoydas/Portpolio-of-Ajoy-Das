@@ -77,5 +77,5 @@ Please ensure your code is clean, readable, and properly documented.
 
 ## License
 
-This project is licensed under the **MIT License**. You are free to use, modify, and distribute this code with proper attribution.
+This project is licensed under the **MIT License**. You are free to use, modify, and distribute this code with proper attribution
 
