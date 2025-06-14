@@ -1,4 +1,4 @@
-const CACHE_NAME = "js-projects-cache-v2";
+const CACHE_NAME = "js-projects-cache-v3";
 
 const urlsToCache = [
   "/",
