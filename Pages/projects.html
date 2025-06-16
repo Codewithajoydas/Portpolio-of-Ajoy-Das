@@ -1,111 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project</title>
-    <style>
-        *{
-    transition: all 0.5s ease-in-out;
 
-        }
-      body {
-        margin: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .container {
+      margin-top: 70px;
+      width: 100%;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: clamp(50px, 8vw, 100px);
+      color: rgb(43, 43, 43);
+      letter-spacing: 10px;
+      font-weight: bolder;
+      font-family: "Times New Roman", Times, serif !important;
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .item {
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.242);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .item img {
+      border-radius: 10px;
+    }
+
+    .item .btns a:last-child {
+      background: #000;
+      color: whitesmoke;
+      border-radius: 5px;
+      padding: 10px 30px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .item .btns a:first-child:hover::after {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%230033ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-external-link-icon lucide-external-link'%3E%3Cpath d='M15 3h6v6'/%3E%3Cpath d='M10 14 21 3'/%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
+      width: 20px;
+    }
+
+    .item .btns a:first-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+    }
+
+    button {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .btns {
+      margin: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    @media (max-width: 700px) {
       .container {
-        margin-top: 70px;
-        width: 100%;
-        text-align: center;
-        padding: 40px;
-      }
-      h1 {
-        text-align: center;
-        font-size: clamp(50px, 8vw, 100px);
-        color: rgb(43, 43, 43);
-        letter-spacing: 10px;
-        font-weight: bolder;
-        font-family: "Times New Roman", Times, serif !important;
-      }
-      .items {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        justify-content: center;
-        width: 100%;
-      }
-      .item {
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.242);
-        transition: all 0.5s ease-in-out;
-      }
-     
-      .item img {
-        border-radius: 10px;
-      }
-      .item .btns a:last-child {
-        background: #000;
-        color: whitesmoke;
-        border-radius: 5px;
-        padding: 10px 30px;
-        border: none;
-        cursor: pointer;
-      }
- .item .btns a:first-child:hover::after{
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%230033ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-external-link-icon lucide-external-link'%3E%3Cpath d='M15 3h6v6'/%3E%3Cpath d='M10 14 21 3'/%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
-    width: 20px;
- }
- .item .btns a:first-child{
-    display: flex;
-    justify-content: center;align-items: center;
-    gap: 4px;
-    text-decoration: none;
- }
- button{
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
- }
-      .btns {
-        margin: 10px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-      }
-      @media (max-width: 700px) {
-        .container {
-            margin-top: 0px !important;
-        padding:10px 40px;
+        margin-top: 0px !important;
+        padding: 10px 40px;
 
-        }
       }
-     .btns a button{
-        background: none !important;
-        border: none !important;
-        color: inherit;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Projects</h1><br/>
-      <div class="items">
-        
+      .searchBox {
+      display: flex;
+      max-width: 300px !important;
+      border: 1px solid black;
+      border-radius: 10px;
+      overflow: hidden;
+      align-items: center;
+    }
+
+    }
+
+    .btns a button {
+      background: none !important;
+      border: none !important;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .searchBox {
+      display: flex;
+      width: 600px;
+      max-width: 600px;
+      border: 1px solid black;
+      border-radius: 10px;
+      overflow: hidden;
+      align-items: center;
+    }
+
+    input {
+      padding: 15px;
+      border: none;
+      background: none;
+      outline: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .searchBox button {
+      /* border-radius: 10px; */
+      padding: 15px 30px;
+      background: #000;
+      border: 1px solid black;
+      color: white;
+
+    }
+
+    search {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .searchBox:focus-within {
+      box-shadow: 1px 1px 10px rgba(94, 94, 94, 0.575);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Projects</h1><br />
+    <search>
+      <label for="search" class="searchBox">
+        <label for="search" style="padding: 0 0 0 10px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-search-icon lucide-search">
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
+          </svg>
+        </label>
+        <input type="search" name="search" id="search" placeholder="Search Projects..." accesskey="k">
+        <button type="submit" style="cursor: pointer;">Search</button><br>
+      </label>
+    </search>
+    <br>
+    <div class="items">
+
     </div>
 
     <script>
 
-  fetch("projects.json")
-    .then((response) => response.json())
-    .then((projects) => {
-      const container = document.querySelector(".items");
+fetch("projects.json")
+  .then((response) => response.json())
+  .then((projects) => {
+    const container = document.querySelector(".items");
+    const search = document.getElementById("search");
 
-      projects.forEach((project, index) => {
+    function renderProjects(list) {
+      container.innerHTML = "";
+      list.forEach((project, index) => {
         const item = document.createElement("div");
         item.className = "item";
 
         item.innerHTML = `
-          <img src="./screenshots/${index + 1}.png" alt="${project.name}" width="100%" /><br /><br />
+          <img src="./screenshots/${index + 1}.png" alt="${project.name}" width="100%" class="preview-img"/><br /><br />
           <h3>${project.name}</h3><br />
           <p>${project.description}</p><br />
           <div class="btns">
@@ -113,13 +189,59 @@
             <a href="https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS" target="_blank"><button>Go to Repo.</button></a>
           </div>
         `;
-
         container.appendChild(item);
       });
-    })
-    .catch((error) => {
-      window.alert("An error occurred: " + error.message);
+    }
+
+    // Render all projects initially
+    renderProjects(projects);
+
+    // Search filtering
+    search.addEventListener("input", () => {
+      const searchValue = search.value.toLowerCase();
+
+      const filtered = projects.filter(project =>
+        project.name.toLowerCase().includes(searchValue) ||
+        project.description.toLowerCase().includes(searchValue)
+      );
+
+      renderProjects(filtered);
     });
+  });
+
+          document.querySelectorAll(".preview-img").forEach((img) => {
+            img.addEventListener("click", () => {
+              openImgPreview(img.src);
+            });
+          });
+
+          function openImgPreview(src) {
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.backgroundColor = "rgba(0,0,0,0.8)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+            overlay.style.zIndex = "1000";
+            const previewImg = document.createElement("img");
+            previewImg.src = src;
+            previewImg.style.maxWidth = "90%";
+            previewImg.style.maxHeight = "90%";
+            previewImg.style.border = "5px solid white";
+            previewImg.style.borderRadius = "10px";
+
+            overlay.appendChild(previewImg);
+            document.body.appendChild(overlay);
+
+            overlay.addEventListener("click", () => {
+              overlay.remove();
+            });
+          }
     </script>
-  </body>
+</body>
+
 </html>
