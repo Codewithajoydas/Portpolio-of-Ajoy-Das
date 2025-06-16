@@ -13,6 +13,7 @@ const urlsToCache = [
   "/Pages/skills.html",
   "/Pages/education.html",
   "/Pages/contact.html",
+  "/Pages/projects.html",
 ];
 
 // Install event

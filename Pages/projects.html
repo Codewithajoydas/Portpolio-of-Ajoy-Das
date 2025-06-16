@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <style>
+        *{
+    transition: all 0.5s ease-in-out;
+
+        }
+      body {
+        margin: 0;
+      }
+      .container {
+        margin-top: 70px;
+        width: 100%;
+        text-align: center;
+        padding: 40px;
+      }
+      h1 {
+        text-align: center;
+        font-size: clamp(50px, 8vw, 100px);
+        color: rgb(43, 43, 43);
+        letter-spacing: 10px;
+        font-weight: bolder;
+        font-family: "Times New Roman", Times, serif !important;
+      }
+      .items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+      }
+      .item {
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.242);
+        transition: all 0.5s ease-in-out;
+      }
+     
+      .item img {
+        border-radius: 10px;
+      }
+      .item .btns a:last-child {
+        background: #000;
+        color: whitesmoke;
+        border-radius: 5px;
+        padding: 10px 30px;
+        border: none;
+        cursor: pointer;
+      }
+ .item .btns a:first-child:hover::after{
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%230033ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-external-link-icon lucide-external-link'%3E%3Cpath d='M15 3h6v6'/%3E%3Cpath d='M10 14 21 3'/%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3C/svg%3E");
+    width: 20px;
+ }
+ .item .btns a:first-child{
+    display: flex;
+    justify-content: center;align-items: center;
+    gap: 4px;
+    text-decoration: none;
+ }
+ button{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+ }
+      .btns {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      @media (max-width: 700px) {
+        .container {
+            margin-top: 0px !important;
+        padding:10px 40px;
+
+        }
+      }
+     .btns a button{
+        background: none !important;
+        border: none !important;
+        color: inherit;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Projects</h1><br/>
+      <div class="items">
+        
+    </div>
+
+    <script>
+
+  fetch("projects.json")
+    .then((response) => response.json())
+    .then((projects) => {
+      const container = document.querySelector(".items");
+
+      projects.forEach((project, index) => {
+        const item = document.createElement("div");
+        item.className = "item";
+
+        item.innerHTML = `
+          <img src="./screenshots/${index + 1}.png" alt="${project.name}" width="100%" /><br /><br />
+          <h3>${project.name}</h3><br />
+          <p>${project.description}</p><br />
+          <div class="btns">
+            <a href="${project.live}" target="_blank"><button>Preview</button></a>
+            <a href="https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS" target="_blank"><button>Go to Repo.</button></a>
+          </div>
+        `;
+
+        container.appendChild(item);
+      });
+    })
+    .catch((error) => {
+      window.alert("An error occurred: " + error.message);
+    });
+    </script>
+  </body>
+</html>

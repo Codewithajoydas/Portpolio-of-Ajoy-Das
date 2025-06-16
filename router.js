@@ -6,6 +6,7 @@
       "/contact": "./Pages/contact.html",
       "/education": "./Pages/education.html",
       "/skills": "./Pages/skills.html",
+      "/projects": "./Pages/projects.html",
     };
 
     function navigateToPage(path) {
