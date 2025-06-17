@@ -335,19 +335,15 @@
             renderProjects(result);
           }
 
-          // Initial render
           renderProjects(projects);
 
-          // Filter by radio buttons
           filterRadios.forEach((radio) => {
             radio.addEventListener("change", filterAndRender);
           });
 
-          // Filter by search input
           search.addEventListener("input", filterAndRender);
         });
 
-      // Optional image preview logic remains unchanged
     </script>
 
 </body>
