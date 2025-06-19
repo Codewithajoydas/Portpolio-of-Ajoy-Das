@@ -275,9 +275,13 @@
     <div class="items">
 
     </div>
+    <div id="imageModal"
+      style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+      <img id="modalImg" src="" style="max-width:90%; max-height:90%; border-radius:10px;" />
+    </div>
 
-    <script>
-      fetch("projects.json")
+   <script>
+    fetch("projects.json")
         .then((response) => response.json())
         .then((projects) => {
           const container = document.querySelector(".items");
@@ -289,12 +293,12 @@
 
             if (list.length === 0) {
               container.innerHTML = `
-      <div style="text-align:center; padding:40px;">
-       <h2 style="color:gray;">🚧 Coming very soon</h2>
+<div style="text-align:center; padding:40px;">
+ <h2 style="color:gray;">🚧 Coming very soon</h2>
 <p style="color:#666;">We’re working on it. Stay tuned!</p>
 
-      </div>
-    `;
+</div>
+`;
               return;
             }
 
@@ -303,14 +307,14 @@
               item.className = "item";
 
               item.innerHTML = `
-      <img src="${project.image}" alt="${project.name}" width="100%" class="preview-img"/><br /><br />
-      <h3>${project.name}</h3><br />
-      <p>${project.description}</p><br />
-      <div class="btns">
-        <a href="${project.live}" target="_blank"><button>Preview</button></a>
-        <a href="https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS" target="_blank"><button>Go to Repo.</button></a>
-      </div>
-    `;
+<img src="${project.image}" alt="${project.name}" width="100%" class="preview-img"/><br /><br />
+<h3>${project.name}</h3><br />
+<p>${project.description}</p><br />
+<div class="btns">
+  <a href="${project.live}" target="_blank"><button>Preview</button></a>
+  <a href="https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS" target="_blank"><button>Go to Repo.</button></a>
+</div>
+`;
               container.appendChild(item);
             });
           }
@@ -343,8 +347,21 @@
 
           search.addEventListener("input", filterAndRender);
         });
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
 
-    </script>
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("preview-img")) {
+          modal.style.display = "flex";
+          modalImg.src = e.target.src;
+        }
+      });
+
+      modal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+   </script>
 
 </body>
 

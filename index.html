@@ -306,14 +306,20 @@
 
 
 
-    function downloadResume() {
-      const link = document.createElement('a');
-      link.href = './assets/Ajoy_Das_Resume.pdf';
-      link.download = 'Ajoy_Das_Resume.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+      function downloadResume() {
+        const confirmation = window.confirm("Do you want to download Ajoy Das's resume?");
+        if (confirmation) {
+          const link = document.createElement('a');
+          link.href = './assets/Ajoy_Das_Resume.pdf';
+          link.download = 'Ajoy_Das_Resume.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else {
+          alert("Resume download canceled.");
+        }
+      }
+
     const menuBtn = document.querySelector(".span1");
     const nav = document.querySelector("nav");
     const navLinks = document.querySelectorAll("nav a");
@@ -398,6 +404,7 @@
       .push({});
   </script>
   <script src="router.js"></script>
+  
 </body>
 
 </html>
