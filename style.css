@@ -4,6 +4,9 @@
   --btn-bg: #000;
   --btn-color: #fff;
   --bg-inp:#fff;
+  --dark-text-color: #333;
+  --color-light : #222;
+  --img:#fff
 }
 
 [data-theme="dark"] {
@@ -11,8 +14,24 @@
   --color: white;
   --btn-bg:white;
   --btn-color:#000;
+  --dark-text-color: #999;
+  --color-light : #c4c4c4;
   --bg-inp:#444;
+  --img:#fff
+
 }
+[data-theme="light"] {
+  --bg-color: #fff;
+  --color: #000;
+  --btn-bg: #000;
+  --btn-color: #fff;
+  --bg-inp:#fff;
+  --dark-text-color: #333;
+  --color-light : #222;
+  --img:#fff
+
+}
+
 
 html,
 body {
@@ -27,6 +46,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   user-select: none;
+  transition: all 0.2s ease-in-out !important;
   font-family: "Quicksand", sans-serif !important;
 }
 
@@ -213,9 +233,12 @@ nav a:hover {
   }
 }
 
-.share-btn {
+.share-btn, #theme, #fullscreen {
   border: none;
   background: none;
+  svg{
+    stroke: var(--color);
+  }
 }
 
 [role="button"] {

@@ -17,12 +17,8 @@
         overflow-y: hidden;
         margin: 0;
         font-family: "Quicksand", sans-serif;
-        /* background: linear-gradient(
-          40deg,
-          rgba(173, 243, 8, 0.581),
-          transparent 50%
-        ); */
         background-attachment: fixed;
+        height: 100vh;
       }
 
       main {
@@ -97,7 +93,7 @@
         right: 0px;
         bottom: 0;
         border-radius: 12px;
-        /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
+        filter: drop-shadow(0 0 30px var(--img));
       }
 
       @media screen and (max-width: 700px) {
@@ -123,6 +119,7 @@
           img{
             position: absolute;
             right: 0;
+            display: none;
           }
         }
         #hero-title {
@@ -276,7 +273,7 @@
       h1 {
         text-align: center;
         font-size: clamp(50px, 6vw, 100px) !important;
-        color: rgb(43, 43, 43);
+        color: var(--dark-text-color);
         letter-spacing: 10px;
         font-weight: bolder;
         font-family: "Times New Roman", Times, serif !important;

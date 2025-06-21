@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-theme="dark">
+<body data-theme="light">
   <!-- Loading Spinner -->
   <div class="loading">
     <div class="spinner"></div>
@@ -90,7 +90,8 @@
           <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
         </svg>
       </button>
-      <div role="button" id="fullscreen" title="fullscreen Mode"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+      <div role="button" id="fullscreen" title="fullscreen Mode">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
           viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
           class="lucide lucide-fullscreen-icon lucide-fullscreen">
           <path d="M3 7V5a2 2 0 0 1 2-2h2" />
@@ -98,7 +99,22 @@
           <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
           <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
           <rect width="10" height="8" x="7" y="8" rx="1" />
-        </svg></div>
+        </svg>
+      </div>
+      <div role="button" id="theme" title="Toggle Theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+      </div>
       <button id="installBtn" style="display: none" title="install app">Install App</button>
 
     </ul>
@@ -118,16 +134,42 @@
       });
     }
 
+ 
+        let themeBtn = document.getElementById("theme");
+
+        // Define icons
+        const sunIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>`;
+
+        const moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon-icon lucide-sun-moon"><path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/><path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/></svg>`;
+
+        // Set theme and icon on load
+        window.addEventListener("DOMContentLoaded", () => {
+          const savedTheme = localStorage.getItem("theme") || "light";
+          document.body.dataset.theme = savedTheme;
+          themeBtn.innerHTML = savedTheme === "dark" ? sunIcon : moonIcon;
+        });
+
+        // Toggle theme + update icon
+        themeBtn.addEventListener("click", () => {
+          const current = document.body.dataset.theme;
+          const newTheme = current === "dark" ? "light" : "dark";
+
+          document.body.dataset.theme = newTheme;
+          localStorage.setItem("theme", newTheme);
+          themeBtn.innerHTML = newTheme === "dark" ? sunIcon : moonIcon;
+        });
+
+
     let fullscreenBtn = document.querySelector("#fullscreen");
 
     fullscreenBtn.addEventListener("click", () => {
       if (!document.fullscreenElement) {
         document.documentElement.requestFullscreen();
-        fullscreenBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minimize-icon lucide-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg>`;
+        fullscreenBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minimize-icon lucide-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg>`;
       } else {
         document.exitFullscreen();
         fullscreenBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-          viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
           stroke-linejoin="round" class="lucide lucide-fullscreen-icon lucide-fullscreen">
           <path d="M3 7V5a2 2 0 0 1 2-2h2" />
           <path d="M17 3h2a2 2 0 0 1 2 2v2" />
