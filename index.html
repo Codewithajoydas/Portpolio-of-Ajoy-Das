@@ -42,6 +42,13 @@
     rel="stylesheet" />
   <link rel="canonical" href="https://codewithajoydas.live">
   <style>
+    html,
+    body {
+      margin: 0;
+      background-color: #fff;
+      transition: all 0.5s ease-in-out !important;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -137,7 +144,7 @@
 
       nav.active {
         /* display: block; */
-        width: 100vw !important;
+        width: 70vw !important;
         height: 100vh !important;
         opacity: 1 !important;
       }
@@ -238,6 +245,10 @@
       border: none;
       background: none;
     }
+
+    [role="button"] {
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -268,14 +279,14 @@
           ">Ajoy Das.</span>
     </div>
     <ul>
-      <li><a href="#/landing" data-link>Home</a></li>
-      <li><a href="#/about" data-link>About</a></li>
-      <li><a href="#/skills" data-link>Skills</a></li>
-      <li><a href="#/education" data-link>Education</a></li>
-      <li><a href="#/projects" data-link>Projects</a></li>
-      <li><a href="#/contact" data-link>Contact</a></li>
-      <a href="#" onclick="downloadResume()">Download Resume</a>
-      <button class="share-btn">
+      <li title="Home" aria-label="home"><a href="#/landing" data-link>Home</a></li>
+      <li title="About" aria-label="about"><a href="#/about" data-link>About</a></li>
+      <li title="Skills" aria-label="Skills"><a href="#/skills" data-link>Skills</a></li>
+      <li title="Education" aria-label="Education"><a href="#/education" data-link>Education</a></li>
+      <li title="Projects" aria-label="Porjects"><a href="#/projects" data-link>Projects</a></li>
+      <li title="Contact" aria-label="Contact"><a href="#/contact" data-link>Contact</a></li>
+      <a href="#" onclick="downloadResume()" title="Download Resume">Download Resume</a>
+      <button class="share-btn" role="button" title="Share app link">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
           class="lucide lucide-share2-icon lucide-share-2">
@@ -286,7 +297,17 @@
           <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
         </svg>
       </button>
-      <button id="installBtn" style="display: none">Install App</button>
+      <div role="button" id="fullscreen" title="fullscreen Mode"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-fullscreen-icon lucide-fullscreen">
+          <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+          <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+          <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+          <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+          <rect width="10" height="8" x="7" y="8" rx="1" />
+        </svg></div>
+      <button id="installBtn" style="display: none" title="install app">Install App</button>
+
     </ul>
   </nav>
 
@@ -304,21 +325,39 @@
       });
     }
 
+    let fullscreenBtn = document.querySelector("#fullscreen");
 
-
-      function downloadResume() {
-        const confirmation = window.confirm("Do you want to download Ajoy Das's resume?");
-        if (confirmation) {
-          const link = document.createElement('a');
-          link.href = './assets/Ajoy_Das_Resume.pdf';
-          link.download = 'Ajoy_Das_Resume.pdf';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        } else {
-          alert("Resume download canceled.");
-        }
+    fullscreenBtn.addEventListener("click", () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+        fullscreenBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minimize-icon lucide-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg>`;
+      } else {
+        document.exitFullscreen();
+        fullscreenBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" class="lucide lucide-fullscreen-icon lucide-fullscreen">
+          <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+          <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+          <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+          <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+          <rect width="10" height="8" x="7" y="8" rx="1" />
+        </svg>`
       }
+    });
+
+    function downloadResume() {
+      const confirmation = window.confirm("Do you want to download Ajoy Das's resume?");
+      if (confirmation) {
+        const link = document.createElement('a');
+        link.href = './assets/Ajoy_Das_Resume.pdf';
+        link.download = 'Ajoy_Das_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } else {
+        alert("Resume download canceled.");
+      }
+    }
 
     const menuBtn = document.querySelector(".span1");
     const nav = document.querySelector("nav");
@@ -334,9 +373,12 @@
       });
     });
 
-    menuBtn.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
+      menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+
+      
+      });
+
     document.querySelectorAll("li").forEach((a) => {
       a.addEventListener("click", () => {
         nav.classList.remove("active");
@@ -404,7 +446,7 @@
       .push({});
   </script>
   <script src="router.js"></script>
-  
+
 </body>
 
 </html>
