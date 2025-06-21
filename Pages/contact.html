@@ -8,23 +8,23 @@
       body {
         margin: 0;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: #222;
+        height: 100vh;
+        background: var(--bg-color);
       }
 
       h1 {
         text-align: center;
         font-size: clamp(50px, 8vw, 100px);
-        color: rgb(43, 43, 43);
         letter-spacing: 10px;
         font-weight: bolder;
         font-family: "Times New Roman", Times, serif !important;
-        margin-top: 90px;
+        padding-top: 90px;
       }
 
       .contact-container {
         max-width: 600px;
         margin: auto auto;
-        background-color: #fff;
+        background-color: var(--bg-color);
         padding: 2rem;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -52,6 +52,8 @@
         font-size: 1rem;
         border-radius: 6px;
         border: 1px solid #ccc;
+        background: var(--bg-inp);
+        color: var(--color);
       }
 
       .contact-form textarea {
