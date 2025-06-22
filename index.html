@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-theme="light">
+<body data-theme="">
   <!-- Loading Spinner -->
   <div class="loading">
     <div class="spinner"></div>
@@ -279,6 +279,9 @@
         }
       })((adsbygoogle = window.adsbygoogle || []))
       .push({});
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.body.dataset.theme = prefersDark ? "dark" : "light";
+
   </script>
   <script src="router.js"></script>
 

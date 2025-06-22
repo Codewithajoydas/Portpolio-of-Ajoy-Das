@@ -32,6 +32,26 @@
 
 }
 
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg-color: #222;
+  --color: white;
+  --btn-bg:white;
+  --btn-color:#000;
+  --dark-text-color: #999;
+  --color-light : #c4c4c4;
+  --bg-inp:#444;
+  --img:#fff;
+  }
+  body {
+    margin: 0;
+    background-color: var(--bg-color) !important;
+    color: var(--color) !important;
+    transition: all 0.5s ease-in-out !important;
+    cursor: url("https://images.vexels.com/media/users/3/131771/isolated/preview/052dd0c023d9db3d5244875791c71c54-pixilated-arrow-cursor.png"), auto;
+  
+  }
+}
 
 html,
 body {
