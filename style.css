@@ -39,13 +39,14 @@ body {
   background-color: var(--bg-color);
   color: var(--color);
   transition: all 0.5s ease-in-out !important;
+  cursor: url("https://images.vexels.com/media/users/3/131771/isolated/preview/052dd0c023d9db3d5244875791c71c54-pixilated-arrow-cursor.png"), auto;
+
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
   transition: all 0.2s ease-in-out !important;
   font-family: "Quicksand", sans-serif !important;
 }
