@@ -115,7 +115,7 @@
       width: 600px;
       max-width: 600px;
       border: 1px solid rgba(0, 0, 0, 0.1);
-
+      cursor: text;
       border-radius: 40px;
       overflow: hidden;
       align-items: center;
@@ -230,18 +230,18 @@
     ::-webkit-scrollbar {
       display: none;
     }
+
     .item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: blur(20px);
-  transition: filter 0.5s ease;
-}
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: blur(20px);
+      transition: filter 0.5s ease;
+    }
 
-.item img:not(.blur) {
-  filter: blur(0);
-}
-
+    .item img:not(.blur) {
+      filter: blur(0);
+    }
   </style>
 </head>
 
@@ -253,7 +253,7 @@
         <label for="search" style="padding: 0 0 0 10px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-search-icon lucide-search">
+            class="lucide lucide-search-icon lucide-search" style="cursor: text;">
             <path d="m21 21-4.34-4.34" />
             <circle cx="11" cy="11" r="8" />
           </svg>
@@ -266,12 +266,8 @@
     <div class="filter">
       <input type="radio" name="filter" id="all" checked>
       <label for="all">All</label>
-      <input type="radio" name="filter" id="html">
-      <label for="html">HTML</label>
-
       <input type="radio" name="filter" id="css">
       <label for="css">CSS</label>
-
       <input type="radio" name="filter" id="js">
       <label for="js">JavaScript</label>
       <input type="radio" name="filter" id="nodejs">
@@ -293,11 +289,11 @@
       <img id="modalImg" src="" style="max-width:90%; max-height:90%; border-radius:10px;" />
     </div>
 
-   <script>
+    <script>
 
 
 
-    fetch("projects.json")
+      fetch("projects.json")
         .then((response) => response.json())
         .then((projects) => {
           const container = document.querySelector(".items");
@@ -364,7 +360,7 @@
           search.addEventListener("input", filterAndRender);
         });
       // 
-   </script>
+    </script>
 
 </body>
 
