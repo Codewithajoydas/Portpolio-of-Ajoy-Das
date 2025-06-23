@@ -7,6 +7,8 @@
       "/education": "./Pages/education.html",
       "/skills": "./Pages/skills.html",
       "/projects": "./Pages/projects.html",
+      "/privacy": "./Pages/privacy-policy.html",
+      "/tc": "./Pages/Terms_Conditions.html",
     };
 
     function navigateToPage(path) {
