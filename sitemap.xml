@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Home & Sections -->
   <url>
     <loc>https://codewithajoydas.live/</loc>
     <lastmod>2025-06-18</lastmod>
@@ -28,5 +29,40 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- JavaScript Projects -->
+  <url><loc>https://codewithajoydas.live/01-palindrome-checker/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/02-random-quote-generator/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/03-digital-clock/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/04-todo-list-app/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/05-form-validation/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/06-typewriter-effect/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/07-stopwatch-app/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/08-rock-paper-scissors-game/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/09-image-slider/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/10-theme-toggle/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/11-weather-app/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/12-sticky-notes/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/13-keyboard-events-game/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/14-character-counter/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/15-password-generator/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/16-qr-code-generator/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/17-drawing-app/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/18-meme-generator/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/19-currency-converter/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/20-drag-&-drop-upload/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/21-speech-to-text/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/22-pomodoro-timer/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/23-Location-Finder/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/24-Reminder/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/25-SPA/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/26-Selfie-Capture-App/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/27-Music-player/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/28-FM/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/29-Ripple-Effect/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/30-custom-cursor/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/31-RadiusMaster/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/32-Quiz/index.html</loc></url>
+  <url><loc>https://codewithajoydas.live/33-Draggable-List/index.html</loc></url>
 
 </urlset>
