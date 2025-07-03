@@ -31,7 +31,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Ajoy Das – JavaScript Project Portfolio" />
     <meta name="twitter:description" content="Responsive and interactive JavaScript apps made with HTML, CSS, and JS." />
-    <meta name="twitter:image" content="https://codewithajoydas.github.io/JAVASCRIPT-PROJECTS/assets/preview.jpg" />
+    <meta name="twitter:image" content="../screenshots/31.png" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8386909400947159"
         crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,12 +47,15 @@
             height: 100vh;
         }
 
+
         .container {
             width: 100%;
             text-align: center;
+            animation: loading .5s linear;
             padding: 60px 90px;
         }
 
+ 
         h1 {
             text-align: center;
             font-size: clamp(50px, 8vw, 100px);
@@ -278,6 +281,15 @@
         .item img:not(.blur) {
             filter: blur(0);
         }
+        .preview-img {
+  filter: blur(10px);
+  transition: filter 0.4s ease-in-out;
+}
+
+.preview-img:not(.blur) {
+  filter: blur(0);
+}
+
     </style>
 </head>
 
@@ -355,7 +367,7 @@
                             item.className = "item";
 
                             item.innerHTML = `
-<img src="${project.image}" alt="${project.name}" loading="lazy" width="100%" class="preview-img" class="blur" onload="this.classList.remove('blur')"/><br /><br />
+<img src="${project.image}" alt="${project.name}" onload="this.classList.remove('blur')" loading="lazy" width="100%" class="preview-img" class="blur" onload="this.classList.remove('blur')"/><br /><br />
 <h3>${project.name}</h3><br />
 <p>${project.description}</p><br />
 <div class="btns">
