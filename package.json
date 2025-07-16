@@ -1,23 +1,27 @@
 {
   "name": "javascript-projects",
-  "version": "3.5.0",
-  "description": "![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)\r ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)\r ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)",
-  "homepage": "https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS#readme",
-  "bugs": {
-    "url": "https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Codewithajoydas/JAVASCRIPT-PROJECTS.git"
-  },
-  "license": "ISC",
-  "author": "Ajoy Das",
-  "type": "commonjs",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "typed.js": "^2.1.0"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "vite": "^7.0.4"
   }
 }
