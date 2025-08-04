@@ -1,0 +1,48 @@
+﻿[Arrow]
+Path=normal select.cur
+
+[UpArrow]
+Path=alternative.cur
+
+[Wait]
+Path=busy.ani
+
+[SizeNWSE]
+Path=dignoal resize 1.ani
+
+[SizeNESW]
+Path=dignoal resize 2.ani
+
+[NWPen]
+Path=hand.cur
+
+[Help]
+Path=help.cur
+
+[SizeWE]
+Path=hori resize.ani
+
+[Hand]
+Path=link.cur
+
+[Pin]
+Path=location.cur
+
+[SizeAll]
+Path=move.ani
+
+[Person]
+Path=person.cur
+
+[Crosshair]
+Path=prection.cur
+
+[No]
+Path=unav.cur
+
+[SizeNS]
+Path=vertical .ani
+
+[AppStarting]
+Path=working in background.ani
+

@@ -1,0 +1,114 @@
+@import "variables";
+body {
+  background: #0e0e0e;
+  overflow-x: hidden !important;
+  color: white;
+}
+
+.home {
+  background: url("");
+  height: 100vh;
+  width: 100%;
+  .showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    img {
+      border-radius: 0 10% 0 0;
+      z-index: -1;
+    }
+    .text {
+      width: 60%;
+      padding: 10px;
+      .btn1 {
+        background: #000;
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        border: 1px solid lightgray;
+        border-radius: 50px;
+        margin-block: 20px;
+        cursor: pointer;
+        &:hover {
+          // box-shadow: 5px 5px 0px #4e023f;
+          box-shadow: 5px 5px 0px #333;
+        }
+      }
+    }
+  }
+}
+.h-section {
+  color: white;
+  video {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px; // Height of fade
+    background: linear-gradient(to top, #0e0e0e, transparent);
+    z-index: -1;
+  }
+  .h-title {
+    padding-top: 50px;
+    color: white;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+      font-size: 7rem;
+      font-weight: bolder;
+      span {
+        font-family: $Playfair;
+        text-transform: capitalize;
+        display: inline-block;
+        cursor: pointer;
+      }
+    }
+    p {
+      font-family: $Lato;
+      letter-spacing: 4px;
+    }
+  }
+}
+
+.boxes .item {
+  width: 500px;
+  height: 500px;
+  margin: 30px;
+  text-align: center;
+  svg {
+    width: 300px;
+    fill: #595959;
+  }
+}
+.boxes {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  position: absolute;
+}
+.customers {
+  text-align: center;
+}
+
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+}

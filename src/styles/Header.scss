@@ -1,0 +1,45 @@
+@import "variables";
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  z-index: 10000;
+  background: #0000000e;
+  color: white;
+  .logo {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    img {
+      border-radius: 50%;
+    }
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 40px;
+    a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+.btn1 {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border: 1px solid lightgray;
+  border-radius: 50px;
+  cursor: pointer;
+  &:hover {
+    // box-shadow: 5px 5px 0px #4e023f;
+    box-shadow: 5px 5px 0px #333;
+  }
+}

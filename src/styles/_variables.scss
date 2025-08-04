@@ -1,0 +1,14 @@
+$color: rgb(0, 0, 0);
+$bgColor: rgb(163, 216, 119);
+$Playfair: "Playfair Display";
+$Lato: "Lato";
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../assets/fonts/Playfair/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+    font-family: "Lato";
+    src: url(../assets/fonts/Lato/Lato-Regular.ttf);
+}
