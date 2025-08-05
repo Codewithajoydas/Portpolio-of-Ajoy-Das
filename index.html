@@ -166,7 +166,7 @@
       window.addEventListener("load", () => {
         navigator.serviceWorker
           .register("/sw.js")
-          .then((reg) => console.log("Service Worker registered", reg))
+          .then((reg) => console.log(reg))
           .catch((err) =>
             console.error("Service Worker registration failed", err)
           );
@@ -297,11 +297,8 @@
     // Loading screen control
     document.addEventListener("DOMContentLoaded", function () {
       const loading = document.querySelector(".loading");
-      const mainContent = document.querySelector(".about-container");
-
       setTimeout(() => {
         loading.style.display = "none";
-        mainContent.style.display = "flex";
       }, 2000);
     });
     document
@@ -316,8 +313,7 @@
         } catch (error) {
           console.error("Somthing wrong", error);
         }
-      })((adsbygoogle = window.adsbygoogle || []))
-      .push({});
+      });
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         document.body.dataset.theme = prefersDark ? "dark" : "light";
 
