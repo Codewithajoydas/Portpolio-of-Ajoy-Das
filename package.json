@@ -15,7 +15,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "npx vite"
+    "start": "npx vite",
+    "build": "vite build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "gsap": "^3.13.0",
@@ -24,6 +26,7 @@
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "vite": "^6.3.5"
   },
   "keywords": []

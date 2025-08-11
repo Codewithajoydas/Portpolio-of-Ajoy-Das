@@ -3,7 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { SplitText } from "gsap/SplitText";
-
+import "../assets/icons/favicon.ico"
+import "../css/home.css"
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText);
 let divs = document.querySelector(".divs .div1");
 gsap.from(divs, {
